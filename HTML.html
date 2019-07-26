@@ -8,7 +8,23 @@
 <body id='body'>
   <!-- <div id="gostbtn">target</div> -->
   <div class="game">
+
+
   <p id="target"></p>
+  <button id="openModal">Open modal</button>
+  <section id="modalArea" class="modalArea">
+    <div id="modalBg" class="modalBg"></div>
+    <div class="modalWrapper">
+      <div class="modalContents">
+        <h1>Here are modal contents!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      </div>
+      <div id="closeModal" class="closeModal">
+        ×
+      </div>
+    </div>
+</section>
+
   <p class="info">
     <!-- 正解した文字:  -->
     <span id="score"></span>
@@ -39,6 +55,7 @@
     <btn id="result7">間違えた問題</btn>
     <btn id="result6">戻る</btn>
   </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js_HTML/HTML_main.js"></script>
   <!-- <div class="stage"> -->
     <!-- <div id="cards">

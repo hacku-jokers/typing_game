@@ -19,7 +19,7 @@
   let score;
   let miss;
   let score_rate;
-  const timeLimit = 3 * 1000;
+  const timeLimit = 60 * 1000;
   const timeReady = 3 * 1000;
   let startTime;
   let startGameTime;
@@ -155,3 +155,12 @@
     }
   });
 }
+
+$(function () {
+  $('#openModal').click(function(){
+      $('#modalArea').fadeIn();
+  });
+  $('#closeModal , #modalBg').click(function(){
+    $('#modalArea').fadeOut();
+  });
+});
