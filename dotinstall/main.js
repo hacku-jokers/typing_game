@@ -10,6 +10,8 @@
   ];
   let word;
   let loc;
+  let str_len; //　文字列
+  let total_score;
   let score;
   let miss;
   const timeLimit = 3 * 1000;
@@ -20,6 +22,7 @@
   const scoreLabel = document.getElementById('score');
   const missLabel = document.getElementById('miss');
   const timerLabel = document.getElementById('timer');
+  const t_s = document.getElementById('score');
 
   function updateTarget() {
     let placeholder = '';
@@ -47,7 +50,7 @@
 
       clearTimeout(timeoutId);
       setTimeout(() => {
-        showResult();
+        showResult(total_score);
       }, 100);
 
       timerLabel.textContent = '0.00';
@@ -77,14 +80,21 @@
     if (isPlaying !== true) {
       return;
     }
-
+    str_len++;
     if (e.key === word[loc]) {
       loc++;
+      score++;
       if (loc === word.length) {
         word = words[Math.floor(Math.random() * words.length)];
         loc = 0;
+        str_len = 0;
+        score = 0;
+        if(score === str_len){
+          total_score++;
+        }
+
       }
-      score++;
+
       scoreLabel.textContent = score;
       updateTarget();
     } else {
