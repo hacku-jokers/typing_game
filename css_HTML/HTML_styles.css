@@ -47,7 +47,7 @@ body {
 
 }
 
-#openModa {
+.openModal {
   font-size: 40px;
   background-color: #FF4500;
   padding:10px;
@@ -156,9 +156,9 @@ body {
 /* 以下ボタンスタイル */
 
 
-#openModal {
+/* #openModal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform:translate(-50%,-50%);
-}
+} */
