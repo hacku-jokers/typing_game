@@ -104,9 +104,6 @@
     btn1.parentNode.removeChild(btn1);
     btn2.parentNode.removeChild(btn2);
 
-    // var btn = element.parentNode.removeChild(element);
-    // <input type="btn" value="タイピング初級編を始める" onclick="btn.disabled = true;">
-
 
 
     loc = 0;
