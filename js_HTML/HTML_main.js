@@ -20,7 +20,7 @@
   let miss;
   let score_rate;
   // const timeMimit = 60 * 1000;
-  const timeLimit = 60 * 1000;
+  const timeLimit = 1 * 1000;
   const timeReady = 3 * 1000;
   let startTime;
   let startGameTime;
@@ -161,4 +161,9 @@ $(function () {
   $('#closeModal , #modalBg').click(function(){
     $('#modalArea').fadeOut();
   });
+
+  $('#result6').click(function(){
+    console.log("push");
+    window.location.href="./index.html";
+  })
 });
