@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table{
+        width: 100%;
+        }
+
+        table th{
+        position: relative;
+        text-align: left;
+        width: 15%;
+        }
+
+        table th:after{
+        display: block;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        top:calc(50% - 1px);
+        right:20px;
+        }
+
+        table td{
+        text-align: left;
+        width: 85%;
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="./js_HTML/modules/save_data.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>  
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyA9mh7-YZS28WSoOyzE79COw3IWmtQ4R8Q",
+          authDomain: "hackutyping.firebaseapp.com",
+          databaseURL: "https://hackutyping.firebaseio.com",
+          projectId: "hackutyping",
+          storageBucket: "hackutyping.appspot.com",
+          messagingSenderId: "571576721839",
+          appId: "1:571576721839:web:97a9b90a92fd63d9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <div id="miss_data"></div>
+</body>
+</html>

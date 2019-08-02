@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+<body>
+<script>
+    $( function () {
+    var strid  = "";
+    var request = new XMLHttpRequest();
+    var url = 'http://api.paiza.io/runners/create'
+    request.open('POST',url, true);
+    request.responseType = 'json';
+    var params = {
+        source_code:"print('hello')",//ソースコード
+        language:"python3",//言語指定、http://api.paiza.io/docs/swagger/#!/runners　を参考に
+        input:"",
+        longpoll:"",
+        longpoll_timeout:"",
+        api_key:"guest"};
+    request.onload = function () {
+      var data = this.response;
+      console.log(data);
+    };
+    $.post(url,params,null,"json")
+    .done(function(result) {
+        console.log(result.id);	
+        url = 'http://api.paiza.io/runners/get_details'
+        request.open('GET',url, true);
+        request.responseType = 'json';
+        var param = {
+            id: result.id
+        }
+        request.onload = function () {
+        var data = this.response;
+        console.log(result);
+        $.getJSON( url, param, function( result ) {
+          showResult( result )
+        })
+        };
+
+    });
+})  
+</script>
+</body>  
+</html>    

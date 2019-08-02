@@ -6,10 +6,11 @@
     'body',
     'head',
     'html',
-    'css',
+    'mio',
 
 
   ];
+
   let word;
   let loc;
   let str_len; //　文字列
@@ -18,8 +19,8 @@
   let score;
   let miss;
   let score_rate;
-  const timeLimit = 10 * 1000;
-  const timeReady = 3 * 1000;
+  const timeLimit = 5 * 1000;
+  const timeReady = 4 * 1000;
   let startTime;
   let startGameTime;
   let isPlaying = false;
@@ -55,18 +56,28 @@
     tol_q.textContent = total_question;
     score_rate = Math.round(total_score/total_question * 100);
     s_rate_str.textContent = score_rate;
+    get_missdata();
     //alert(`${score}文字正解, ${miss}文字間違え, ${accuracy.toFixed(2)}%の正答率です!`);
   }
 
 
   function startTimer() {
     const timeLeft = startTime + timeReady - Date.now();
-    console.log(timeLeft);
     // console.log(timeLeft);
-    if (timeLeft < 500) {
+    if (timeLeft < 1000) {
       countLabel.textContent = "START!";
     }else {
-      countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
+      if (timeLeft < 4000) {
+        countLabel.innerHTML = "<img class='img_3' src ='img_3.png'>"
+      }
+      if (timeLeft < 3000) {
+        countLabel.innerHTML = "<img class='img_2' src ='img_2.png'>"
+      }
+      if (timeLeft < 2000) {
+        countLabel.innerHTML = "<img class='img_1' src ='img_1.png'>"
+
+      }
+      // countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
     }
     const timerId = setTimeout(() => {
       startTimer();
@@ -165,6 +176,12 @@
       // missLabel.textContent = miss;
     }
   });
+
+  function add_missdata(miss_ans){
+    var messagesRef = firebase.database().ref('/html');
+    messagesRef.push(miss_ans);
+    // console.log(miss_ans);
+  }
 }
 
 $(function () {
@@ -190,7 +207,3 @@ $(function () {
 
 });
 
-function add_missdata(miss_ans){
-	var messagesRef = firebase.database().ref('/html');
-	messagesRef.push(miss_ans);
-}
