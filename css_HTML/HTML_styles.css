@@ -24,6 +24,10 @@ body {
 .info3 {
   color: #008000;
   font-size: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #btn,#btn1,#btn2 {
@@ -60,7 +64,8 @@ body {
 #result {
   padding: 0;
   font-size: 70px;
-  margin-top: -50px;
+  margin-top: 0;
+  text-align: center;
 }
 
 #result1,#result2,#result3{
@@ -107,16 +112,30 @@ body {
   right:10px;
   width: 100px;
 }
-#result-wrapper{
-  display: none;
-}
-.done #result-wrapper{
-  display: block;
-}
-.done .game{
+#result-wrapper {
   display: none;
 }
 
+#countdown_timer {
+  font-size: 300px;
+}
+
+#elapsed_time {
+  font-size: 50px;
+}
+.done #result-wrapper {
+  display: block;
+  position: absolute;
+
+}
+.done .game {
+  display: none;
+  position: absolute;
+}
+
+.img_1,.img_2,.img_3 {
+  text-align: center;
+}
 /* モーダルCSS */
 .modalArea {
   display: none;
@@ -157,6 +176,9 @@ body {
 
 /* 以下ボタンスタイル */
 
+.e_time {
+  display: none;
+}
 
 /* #openModal {
   position: absolute;

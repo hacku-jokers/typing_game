@@ -7,7 +7,7 @@
     'body',
     'head',
     'html',
-    'css',
+    'mio',
 
 
   ];
@@ -19,9 +19,8 @@
   let score;
   let miss;
   let score_rate;
-  // const timeMimit = 60 * 1000;
   const timeLimit = 1 * 1000;
-  const timeReady = 3 * 1000;
+  const timeReady = 4 * 1000;
   let startTime;
   let startGameTime;
   let isPlaying = false;
@@ -31,6 +30,7 @@
   const scoreLabel = document.getElementById('score');
   const missLabel = document.getElementById('miss');
   const timerLabel = document.getElementById('timer');
+  const countLabel = document.getElementById('countdown_timer');
   const t_s = document.getElementById('score_str'); //total_score
   const tol_q = document.getElementById('tol_question');
   const s_rate_str = document.getElementById('score_rate');
@@ -48,6 +48,7 @@
 
 
   function showResult() {
+    $('#elapsed_time').hide();
     const accuracy = score + miss === 0 ? 0 : score / (score + miss) * 100;
 
     document.getElementById("body").classList.add("done");
@@ -61,20 +62,41 @@
 
   function startTimer() {
     const timeLeft = startTime + timeReady - Date.now();
+    console.log(timeLeft);
     // console.log(timeLeft);
-    timerLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
+    if (timeLeft < 1000) {
+      countLabel.textContent = "START!";
+    }else {
+      if (timeLeft < 4000) {
+        countLabel.innerHTML = "<img class='img_3' src ='img_3.png'>"
+      }
+      if (timeLeft < 3000) {
+        countLabel.innerHTML = "<img class='img_2' src ='img_2.png'>"
+
+      }
+      if (timeLeft < 2000) {
+        countLabel.innerHTML = "<img class='img_1' src ='img_1.png'>"
+
+      }
+      // countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
+    }
     const timerId = setTimeout(() => {
       startTimer();
     }, 100);
     if (timeLeft < 0) {
       startGame();
+      $(function(){
+        $('#countdown_timer').hide();
+        $('#openModal').fadeIn();
+        $('#elapsed_time').fadeIn();
+      });
       clearTimeout(timerId);
      }
   }
 
   function updateTimer() {
     const timeLeft = startGameTime + timeLimit - Date.now();
-    timerLabel.textContent = (timeLeft / 1000).toFixed(2);
+    timerLabel.textContent = (timeLeft / 1000).toFixed(0);
     const timerId = setTimeout(() => {
       updateTimer();
     }, 100);
@@ -113,8 +135,8 @@
     str_len = 0;
     total_score = 0;
     total_question = 1;
-    scoreLabel.textContent = score;
-    missLabel.textContent = miss;
+    // scoreLabel.textContent = score;
+    // missLabel.textContent = miss;
     word = words[Math.floor(Math.random() * words.length)];
 
     startTime = Date.now();
@@ -142,14 +164,15 @@
         }
         str_len = 0;
         score = 0;
-
+        // $('#openModal').fadeOut();
+        // $('#elapsed_time').fadeOut();
 
       }
-      scoreLabel.textContent = score;
+      // scoreLabel.textContent = score;
       updateTarget();
     } else {
       miss++;
-      missLabel.textContent = miss;
+      // missLabel.textContent = miss;
     }
   });
 }
@@ -169,8 +192,9 @@ $(function () {
 
   // #btn = 初級編を選択すること
   $('#btn').click(function(){
-    $('#openModal').fadeIn();
-    console.log("test");
-    
+    // $('#openModal').fadeIn();
+    // console.log("test");
+
   })
+
 });

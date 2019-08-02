@@ -7,11 +7,13 @@
 </head>
 <body id='body'>
   <!-- <div id="gostbtn">target</div> -->
+  <p class="info3">
+    <span id="countdown_timer"></span>
+  </p>
   <div class="game">
-
-
   <p id="target"></p>
   <button class="openModal" id="openModal">中止</button>
+  <button type="button" class="openModal" id="fadein"name="button">2</button>
   <section id="modalArea" class="modalArea">
     <div id="modalBg" class="modalBg"></div>
     <div class="modalWrapper">
@@ -23,18 +25,16 @@
       <div id="closeModal" class="closeModal">×</div>
     </div>
   </section>
+</div>
 
-  <p class="info">
+  <!-- <p class="info">
     <span id="score"></span>
   </p>
   <p class="info2">
      <span id="miss"></span>
-  </p>
-  <p class="info3">
-    <span id="timer"></span>
-  </p>
-  </div>
-   <p id="elapsed time"><span id="timeMinute">0</span>分<span id="timeLimit">00</span>秒経過</p>
+  </p> -->
+
+   <p id="elapsed_time" class="e_time">あと<span id="timer"></span>秒</p>
 
    <btn id="btn">タイピング初級編を始める</btn><br>
    <btn id="btn1">タイピング中級編を始める</btn><br>
@@ -58,6 +58,6 @@
       <div class="card">check</div>
       <div class="card">retry</div> -->
     <!-- </div> -->
-  </div>
+  <!-- </div> -->
 </body>
 </html>
