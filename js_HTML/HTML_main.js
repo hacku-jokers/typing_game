@@ -67,7 +67,11 @@
     if (timeLeft < 500) {
       countLabel.textContent = "START!";
     }else {
-      countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
+      if (timeLeft < 2000) {
+
+      }
+      // countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
+      countLabel.innerHTML = "<img class='img_1' src ='img_1.png'>"
     }
     const timerId = setTimeout(() => {
       startTimer();
