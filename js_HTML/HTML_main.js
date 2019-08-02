@@ -170,7 +170,6 @@ $(function () {
   // #btn = 初級編を選択すること
   $('#btn').click(function(){
     $('#openModal').fadeIn();
-    console.log("test");
-    
+    console.log("test");    
   })
 });
