@@ -151,7 +151,9 @@ body {
   right: 1rem;
   cursor: pointer;
 }
-
+.openModal {
+  display: none;
+}
 
 /* 以下ボタンスタイル */
 

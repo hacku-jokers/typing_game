@@ -61,7 +61,7 @@
 
   function startTimer() {
     const timeLeft = startTime + timeReady - Date.now();
-    console.log(timeLeft);
+    // console.log(timeLeft);
     timerLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
     const timerId = setTimeout(() => {
       startTimer();
@@ -165,5 +165,12 @@ $(function () {
   $('#result6').click(function(){
     console.log("push");
     window.location.href="./index.html";
+  })
+
+  // #btn = 初級編を選択すること
+  $('#btn').click(function(){
+    $('#openModal').fadeIn();
+    console.log("test");
+    
   })
 });
