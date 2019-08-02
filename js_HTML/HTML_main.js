@@ -7,7 +7,7 @@
     'body',
     'head',
     'html',
-    'css',
+    'mio',
 
 
   ];
@@ -19,8 +19,8 @@
   let score;
   let miss;
   let score_rate;
-  const timeLimit = 10 * 1000;
-  const timeReady = 3 * 1000;
+  const timeLimit = 1 * 1000;
+  const timeReady = 4 * 1000;
   let startTime;
   let startGameTime;
   let isPlaying = false;
@@ -64,14 +64,21 @@
     const timeLeft = startTime + timeReady - Date.now();
     console.log(timeLeft);
     // console.log(timeLeft);
-    if (timeLeft < 500) {
+    if (timeLeft < 1000) {
       countLabel.textContent = "START!";
     }else {
+      if (timeLeft < 4000) {
+        countLabel.innerHTML = "<img class='img_3' src ='img_3.png'>"
+      }
+      if (timeLeft < 3000) {
+        countLabel.innerHTML = "<img class='img_2' src ='img_2.png'>"
+
+      }
       if (timeLeft < 2000) {
+        countLabel.innerHTML = "<img class='img_1' src ='img_1.png'>"
 
       }
       // countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
-      countLabel.innerHTML = "<img class='img_1' src ='img_1.png'>"
     }
     const timerId = setTimeout(() => {
       startTimer();
