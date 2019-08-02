@@ -60,5 +60,66 @@
       <div class="card">retry</div> -->
     <!-- </div> -->
   </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA9mh7-YZS28WSoOyzE79COw3IWmtQ4R8Q",
+    authDomain: "hackutyping.firebaseapp.com",
+    databaseURL: "https://hackutyping.firebaseio.com",
+    projectId: "hackutyping",
+    storageBucket: "hackutyping.appspot.com",
+    messagingSenderId: "571576721839",
+    appId: "1:571576721839:web:97a9b90a92fd63d9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>  
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+<div id='messagesDiv'></div>
+<input type='text' id='nameInput' placeholder='Name'>
+<input type='text' id='messageInput' placeholder='Message...'>
+<script type='text/javascript'>
+  var messagesRef = firebase.database().ref('/html');
+
+  $('#messageInput').keypress(function (e) {
+    if (e.keyCode == 13) {
+      var name = $('#nameInput').val();
+      var text = $('#messageInput').val();
+      messagesRef.push(name);
+      $('#messageInput').val('');
+    }
+  });
+
+  const firebaseRef = firebase.database().ref(`/html`);
+  firebaseRef.on("value", function(snapshot) {
+    const html_data = snapshot.val();
+    console.log(JSON.stringify(html_data));
+    for (const key in html_data) {
+      if (html_data.hasOwnProperty(key)) {
+        const element = html_data[key];
+        console.log(element);
+        
+        
+      }
+    }
+    
+
+  });
+//   messagesRef.on('child_added', function (snapshot) {
+//     var message = snapshot.val();
+// console.log(message.name);
+//     if (message.name) {
+//       $('<div/>').text(message.text).prepend($('<em/>').text(message.name+': ')).appendTo($('#messagesDiv'));
+//       $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+//     }
+  // });
+</script>
 </body>
 </html>

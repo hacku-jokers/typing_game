@@ -1,5 +1,4 @@
 'use strict';
-
 {
   const words = [
     'meta',
@@ -145,12 +144,14 @@
       if (loc === word.length) {
         console.log("str"+str_len);
         console.log("正解"+score);
-        word = words[Math.floor(Math.random() * words.length)];
         loc = 0;
         total_question++;
         if(score === str_len){
           total_score++;
+        }else{
+          add_missdata(word);
         }
+        word = words[Math.floor(Math.random() * words.length)];
         str_len = 0;
         score = 0;
         // $('#openModal').fadeOut();
@@ -181,9 +182,15 @@ $(function () {
 
   // #btn = 初級編を選択すること
   $('#btn').click(function(){
+    test();
     // $('#openModal').fadeIn();
     // console.log("test");
 
   })
 
 });
+
+function add_missdata(miss_ans){
+	var messagesRef = firebase.database().ref('/html');
+	messagesRef.push(miss_ans);
+}
