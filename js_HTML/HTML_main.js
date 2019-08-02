@@ -11,6 +11,7 @@
 
 
   ];
+
   let word;
   let loc;
   let str_len; //　文字列
@@ -72,7 +73,6 @@
       }
       if (timeLeft < 3000) {
         countLabel.innerHTML = "<img class='img_2' src ='img_2.png'>"
-
       }
       if (timeLeft < 2000) {
         countLabel.innerHTML = "<img class='img_1' src ='img_1.png'>"

@@ -125,7 +125,7 @@ body {
 }
 .done #result-wrapper {
   display: block;
-  position: absolute;
+  position: relative;
 
 }
 .done .game {
