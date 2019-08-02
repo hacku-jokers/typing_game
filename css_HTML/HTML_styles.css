@@ -107,13 +107,21 @@ body {
   right:10px;
   width: 100px;
 }
-#result-wrapper{
+#result-wrapper {
   display: none;
 }
-.done #result-wrapper{
+
+#countdown_timer {
+  font-size: 300px;
+}
+
+#elapsed_time {
+  font-size: 50px;
+}
+.done #result-wrapper {
   display: block;
 }
-.done .game{
+.done .game {
   display: none;
 }
 
@@ -157,6 +165,9 @@ body {
 
 /* 以下ボタンスタイル */
 
+.e_time {
+  display: none;
+}
 
 /* #openModal {
   position: absolute;
