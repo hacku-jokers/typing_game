@@ -114,17 +114,15 @@
 
 
 
-  btn.addEventListener('click', () => {
+  window.onload = function() {
     if (isPlaying === true) {
       return;
     }
     isPlaying = true;
 
     // console.log(btn);
-    // console.log(isPlaying);
-    btn.parentNode.removeChild(btn);
-    btn1.parentNode.removeChild(btn1);
-    btn2.parentNode.removeChild(btn2);
+
+
 
 
 
@@ -142,7 +140,7 @@
     startTimer();
 
 
-  });
+  }
 
   window.addEventListener('keyup', e => {
     if (isPlaying !== true) {

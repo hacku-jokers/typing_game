@@ -31,6 +31,7 @@ body {
 }
 
 #btn,#btn1,#btn2 {
+  display: none;
   background: #FFA500;
   font-size: 50px;
   letter-spacing: 10px;

@@ -37,9 +37,9 @@
   </div>
    <p id="elapsed_time" class="e_time">あと<span id="timer"></span>秒</p>
 
-   <btn id="btn">タイピング初級編を始める</btn><br>
+   <!-- <btn id="btn">タイピング初級編を始める</btn><br>
    <btn id="btn1">タイピング中級編を始める</btn><br>
-   <btn id="btn2">タイピング上級編を始める</btn>
+   <btn id="btn2">タイピング上級編を始める</btn> -->
 
 
    <div id='result-wrapper'>
@@ -49,7 +49,7 @@
     <p id="result3"><span style='font-size:25px;'>あなたの正答率： </span><br><span id="score_rate">0</span>％</p>
     <btn id="result4">再挑戦</btn>
     <btn id="result5">復習</btn>
-    <btn id="result7">間違えた問題</btn>
+    <btn id="result7" onclick="window.location.href=('./miss_html.html')">間違えた問題</btn>
     <btn id="result6"　onClick="window.open('index.html')">戻る</btn>
   </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
