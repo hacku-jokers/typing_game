@@ -19,7 +19,7 @@
   let score;
   let miss;
   let score_rate;
-  const timeLimit = 5 * 1000;
+  const timeLimit = 50 * 1000;
   const timeReady = 4 * 1000;
   let startTime;
   let startGameTime;
@@ -83,6 +83,7 @@
       startTimer();
     }, 100);
     if (timeLeft < 0) {
+      isPlaying = true;
       startGame();
       $(function(){
         $('#countdown_timer').hide();
@@ -118,7 +119,6 @@
     if (isPlaying === true) {
       return;
     }
-    isPlaying = true;
 
     // console.log(btn);
 
@@ -157,6 +157,10 @@
         total_question++;
         if(score === str_len){
           total_score++;
+          if(!$('#badArea').hasClass('AreaHide')){
+            $('#badArea').addClass('AreaHide');
+          }
+            $('#goodArea').removeClass('AreaHide');
         }else{
           add_missdata(word);
         }
@@ -170,6 +174,10 @@
       // scoreLabel.textContent = score;
       updateTarget();
     } else {
+      if(!$('#goodArea').hasClass('AreaHide')){
+        $('#goodArea').addClass('AreaHide');
+      }
+        $('#badArea').removeClass('AreaHide');
       miss++;
       // missLabel.textContent = miss;
     }
@@ -202,6 +210,8 @@ $(function () {
     // console.log("test");
 
   })
+
+
 
 });
 
