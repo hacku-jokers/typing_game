@@ -56,7 +56,7 @@
     tol_q.textContent = total_question;
     score_rate = Math.round(total_score/total_question * 100);
     s_rate_str.textContent = score_rate;
-    get_missdata();
+    // get_missdata();
     //alert(`${score}文字正解, ${miss}文字間違え, ${accuracy.toFixed(2)}%の正答率です!`);
   }
 
