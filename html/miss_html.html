@@ -39,6 +39,8 @@
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>  
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <button id="test">click</button>
+
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -52,6 +54,12 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        // 全削除のテスト
+        var updates = {};
+        document.getElementById("test").onclick = function(){
+            updates['/html/'] = null;
+            return firebase.database().ref().update(updates); 
+        };
     </script>
     <div id="miss_data"></div>
 </body>
