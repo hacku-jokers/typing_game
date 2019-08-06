@@ -14,7 +14,9 @@
   <btn id="html2">使い方</btn>
   <btn id="html3">復習</btn>
   <btn id="html4" onClick="window.open('settings.html')">設定</btn>
-
+  
+  <div id="rain" ><img src="虹です。はい。.png" style='width: 200px; animation: rotate 2s;'>
+  </div>
 
 </head>
 
@@ -23,6 +25,12 @@
 
 <!-- <a href="">2を始める</a> -->
 <style>
+#rain {
+  z-index: 0;
+  position: absolute;
+  margin: -30% 20 70% 0;
+}  
+
 #Welcome {
   font-size: 50px;
   margin: 0 0 0 23%;
@@ -33,8 +41,9 @@
   margin: 1% 0 0 35%;
 }
 
-
 #html,#Javascript,#css,#swift,#Python,#SQL,#html2,#html3,#html4 {
+  position:relative;
+  z-index: 9999;
   font-size: 50px;
   border-radius: 10px;
   display: inline-block;

@@ -33,33 +33,20 @@
     $.post(url,params,null,"json")
     .done(function(result) {
         console.log(result.id);	
-        /*
-        url2 = 'http://api.paiza.io/runners/get_status'
+
+        sleep(2000);
+        url2 = 'http://api.paiza.io/runners/get_details'
         request.open('GET',url2, true);
         request.responseType = 'json';
         var param = {
             id: result.id,
             api_key:"guest"
         }
-        console.log("a")
+
         $.getJSON( url2, param, function( result2 ) {
-        console.log(result2)
-        });
-        */
-
-        sleep(2000);
-        url3 = 'http://api.paiza.io/runners/get_details'
-        request.open('GET',url3, true);
-        request.responseType = 'json';
-        var param = {
-            id: result.id,
-            api_key:"guest"
-        }
-
-        $.getJSON( url3, param, function( result3 ) {
             
-          console.log(result3)
-          console.log(result3.stdout)
+          console.log(result2)
+          console.log(result2.stdout)
         });
         });
     }) 
