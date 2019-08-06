@@ -1,0 +1,17 @@
+
+{
+    "1":{"question":"print",
+    "discription":"出力するもの"},
+    "2":{"question":"input",
+    "discription":"入力するもの"},
+    "3":{"question":"+",
+    "discription":"足し算する"},
+    "4":{"question":"-",
+    "discription":"引き算する"},
+    "5":{"question":"*",
+    "discription":"掛け算する"},
+    "6":{"question":"/",
+    "discription":"割り算する"},
+        
+                                            
+}
