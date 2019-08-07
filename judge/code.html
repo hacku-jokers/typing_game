@@ -5,27 +5,73 @@
   <title>Ace Editor sample</title>
 </head>
 <body>
+  <button id="test">click</button>
+
   <div id="editor" style="height: 600px"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
-    var editor = ace.edit("editor");
-    editor.$blockScrolling = Infinity;
-    editor.setOptions({
-      enableBasicAutocompletion: true,
-      enableSnippets: true,
-      enableLiveAutocompletion: true
-    });
-    editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/python");
+	function sleep(a){
+		var dt1 = new Date().getTime();
+		var dt2 = new Date().getTime();
+		while (dt2 < dt1 + a){
+			dt2 = new Date().getTime();
+		}
+		return;
+	}
+	var editor = ace.edit("editor");
+	editor.$blockScrolling = Infinity;
+	editor.setOptions({
+	  enableBasicAutocompletion: true,
+	  enableSnippets: true,
+	  enableLiveAutocompletion: true
+	});
+	editor.setTheme("ace/theme/monokai");
+	editor.getSession().setMode("ace/mode/python");
 
-    var data = "";
-    const edi = document.getElementById("editor");
-    document.getElementById("test").onclick = function(){
-        console.log(edi.value);
-        
-    };
+	var data = "";
+	// const edi = document.getElementById("editor");
+	document.getElementById("test").onclick = function(){
+		text = editor.getValue();
+		console.log(text);
+		
+		var strid  = "";
+		var request = new XMLHttpRequest();
+		var url = 'http://api.paiza.io/runners/create'
+		request.open('POST',url, true);
+		request.responseType = 'json';
+		var params = {
+			source_code:text,//ソースコード
+			language:"python3",//言語指定、http://api.paiza.io/docs/swagger/#!/runners　を参考に
+			input:"1 4",
+			longpoll:"",
+			longpoll_timeout:"",
+			api_key:"guest"};
+		request.onload = function () {
+		var data = this.response;
+		console.log(data);
+		};
+		$.post(url,params,null,"json")
+		.done(function(result) {
+			console.log(result.id);	
+
+			sleep(2000);
+			url2 = 'http://api.paiza.io/runners/get_details'
+			request.open('GET',url2, true);
+			request.responseType = 'json';
+			var param = {
+				id: result.id,
+				api_key:"guest"
+		}
+
+		$.getJSON( url2, param, function( result2 ) {
+			
+			console.log(result2)
+			console.log(result2.stdout)
+			});
+		});
+	};
   </script>
-  <button id="test">click</button>
 </body>
 </html>
