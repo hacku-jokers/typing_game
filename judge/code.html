@@ -18,6 +18,14 @@
     });
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/python");
+
+    var data = "";
+    const edi = document.getElementById("editor");
+    document.getElementById("test").onclick = function(){
+        console.log(edi.value);
+        
+    };
   </script>
+  <button id="test">click</button>
 </body>
 </html>
