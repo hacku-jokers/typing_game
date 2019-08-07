@@ -3,30 +3,33 @@
 
 <head>
 	<meta charset="utf-8">
-
-
-
 </head>
 
 
 <body>
-	<div class="top rotate_rainbow">
 
 	<!-- <a href="">2を始める</a> -->
 	<style>
-		#rain {
+		.rainbow img{
 			z-index: 0;
+			bottom: -37%;
+    		left: 54%;
 			position: absolute;
-			margin: -30% 20 70% 0;
+			width: 900px;
+			height: 900px;
 		}
 
 		#Welcome {
+			position: relative;
+			z-index: 9999;
 			font-size: 50px;
 			margin: 0 0 0 23%;
 
 		}
 
 		#Welcome2 {
+			position: relative;
+			z-index: 9999;
 			font-size: 30px;
 			margin: 1% 0 0 35%;
 		}
@@ -135,20 +138,27 @@
 
 		@keyframes rotate_anime {
 			0% {
-				transform: rotate(0deg);
+				transform: rotateZ(0deg);
 				/* アニメーションの進みが0%の時の状態 */
 			}
 
 			100% {
-				transform: rotate(360deg);
+				transform: rotateZ(360deg);
 				/* アニメーションの進みが100%の時の状態 */
 			}
 		}
 		.rotate_rainbow {
-    animation: rotate_anime 10s infinite; /* rotate_animeを1秒かけて実行するのを繰り返す */
+			animation: rotate_anime 20s infinite; /* rotate_animeを1秒かけて実行するのを繰り返す */
+			/* transform-origin: 50% 50%;  */
+	/* transform-origin: center bottom; */
 		}
 	</style>
 
+	<div class="rainbow">
+		<div class="top rotate_rainbow">
+		<img src="rainbow.png">
+		</div>
+	</div>
 	<p id="Welcome">「Tip Type」へようこそ！</p><br>
 	<p id="Welcome2">学びたい項目を選びましょう。</p><br>
 	<btn id="html" onClick="window.open('./html/index.html')">HTML</btn>
@@ -160,8 +170,6 @@
 	<btn id="html2">使い方</btn>
 	<btn id="html3">復習</btn>
 	<btn id="html4" onClick="window.open('settings.html')">設定</btn>
-</div>
-	<!-- <img src="虹です。はい。.png" style='width: 200px; animation: rotate 2s;'> -->
 <body>
 
 </html>
