@@ -20,9 +20,9 @@
     request.open('POST',url, true);
     request.responseType = 'json';
     var params = {
-        source_code:"print('hello')",//ソースコード
+        source_code:"a,b = map(int,input().split())\n"+"if a+b>4:\n"+"    print(a)",//ソースコード
         language:"python3",//言語指定、http://api.paiza.io/docs/swagger/#!/runners　を参考に
-        input:"",
+        input:"1 4",
         longpoll:"",
         longpoll_timeout:"",
         api_key:"guest"};
