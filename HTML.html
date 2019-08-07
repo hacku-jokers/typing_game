@@ -8,6 +8,7 @@
 <body id='body'>
   <!-- <div id="gostbtn">target</div> -->
   <div class="game">
+<<<<<<< HEAD
   <btn id="target"></btn>
   <p class="info">
     <!-- 正解した文字:  -->
@@ -39,6 +40,54 @@
     <btn id="result7">間違えた問題</btn>
     <btn id="result6">戻る</btn>
   </div>
+=======
+
+
+  <p id="target"></p>
+  <button class="openModal" id="openModal">中止</button>
+  <button type="button" class="openModal" id="fadein"name="button">2</button>
+  <section id="modalArea" class="modalArea">
+    <div id="modalBg" class="modalBg"></div>
+    <div class="modalWrapper">
+      <div class="modalContents">
+        <h1>本当に中止しますか？</h1>
+        <p>中止するとこの履歴は無くなります。</p>
+        <button onclick="window.location.reload();">中止する</button>
+      </div>
+      <div id="closeModal" class="closeModal">×</div>
+    </div>
+  </section>
+
+  <!-- <p class="info">
+    <span id="score"></span>
+  </p>
+  <p class="info2">
+     <span id="miss"></span>
+  </p> -->
+  <p class="info3">
+    <span id="countdown_timer"></span>
+  </p>
+  </div>
+   <p id="elapsed_time" class="e_time">あと<span id="timer"></span>秒</p>
+
+   <!-- <btn id="btn">タイピング初級編を始める</btn><br>
+   <btn id="btn1">タイピング中級編を始める</btn><br>
+   <btn id="btn2">タイピング上級編を始める</btn> -->
+
+
+
+   <div id='result-wrapper'>
+    <p id="result">結果</p>
+    <p id="result1"><span id="score_str"></span>問/<span id="tol_question">0</span>問</p>
+    <p id="result2">素晴らしい</p>
+    <p id="result3"><span style='font-size:25px;'>あなたの正答率： </span><br><span id="score_rate">0</span>％</p>
+    <btn id="result4">再挑戦</btn>
+    <btn id="result5">復習</btn>
+    <btn id="result7" onclick="window.location.href=('./miss_html.html')">間違えた問題</btn>
+    <btn id="result6"　onClick="window.open('index.html')">戻る</btn>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+>>>>>>> 7048b70d823dd01276f10dc79345158c115c235f
   <script src="js_HTML/HTML_main.js"></script>
   <!-- <div class="stage"> -->
     <!-- <div id="cards">
@@ -46,5 +95,69 @@
       <div class="card">retry</div> -->
     <!-- </div> -->
   </div>
+<<<<<<< HEAD
+=======
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA9mh7-YZS28WSoOyzE79COw3IWmtQ4R8Q",
+    authDomain: "hackutyping.firebaseapp.com",
+    databaseURL: "https://hackutyping.firebaseio.com",
+    projectId: "hackutyping",
+    storageBucket: "hackutyping.appspot.com",
+    messagingSenderId: "571576721839",
+    appId: "1:571576721839:web:97a9b90a92fd63d9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+<div id='messagesDiv'></div>
+<!-- <input type='text' id='nameInput' placeholder='Name'>
+<input type='text' id='messageInput' placeholder='Message...'> -->
+<script type='text/javascript'>
+  // var messagesRef = firebase.database().ref('/html');
+
+  // $('#messageInput').keypress(function (e) {
+  //   if (e.keyCode == 13) {
+  //     var name = $('#nameInput').val();
+  //     var text = $('#messageInput').val();
+  //     messagesRef.push(name);
+  //     $('#messageInput').val('');
+  //   }
+  // });
+
+  // const firebaseRef = firebase.database().ref(`/html`);
+  // firebaseRef.on("value", function(snapshot) {
+  //   const html_data = snapshot.val();
+  //   console.log(JSON.stringify(html_data));
+  //   for (const key in html_data) {
+  //     if (html_data.hasOwnProperty(key)) {
+  //       const element = html_data[key];
+  //       console.log(element);
+
+
+  //     }
+  //   }
+
+
+  // });
+//   messagesRef.on('child_added', function (snapshot) {
+//     var message = snapshot.val();
+// console.log(message.name);
+//     if (message.name) {
+//       $('<div/>').text(message.text).prepend($('<em/>').text(message.name+': ')).appendTo($('#messagesDiv'));
+//       $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+//     }
+  // });
+</script>
+>>>>>>> 7048b70d823dd01276f10dc79345158c115c235f
 </body>
 </html>
