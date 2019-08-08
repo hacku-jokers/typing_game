@@ -125,8 +125,20 @@ body {
   font-size: 50px;
 }
 #progress {
-  background-color: #31B404;
+  /* background-color: #31B404; */
   display: none;
+  /* background-image: linear-gradient(
+    -45deg,
+    #fff 25%,
+    #31B404 25%, #31B404 50%,
+    #fff 50%, #fff 75%,
+    #31B404 75%, #31B404
+  );   */
+  /* background-size: 8px 8px;
+  width: 800px;
+  height: 20px;
+  padding: 10px; */
+
 }
 progress::-webkit-progress-value {
 }

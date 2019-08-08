@@ -99,6 +99,21 @@
 
   function updateTimer() {
     const timeLeft = startGameTime + timeLimit - Date.now();
+    const progress_num = 100- timeLeft/timeLimit*100;
+    // progressbarについて
+    var color = $('.ui-progressbar-value');
+
+    if(progress_num <=30){
+        color.css('background','green');
+    }else if(progress_num > 30 && progress_num <= 60){
+        color.css('background','yellow');
+    }else if(progress_num > 60){
+        color.css('background','red');
+    }
+    $('#progress').progressbar({
+        value:parseInt(progress_num)
+    });
+    console.log(progress_num);
     timerLabel.textContent = (timeLeft / 1000).toFixed(0);
     const timerId = setTimeout(() => {
       updateTimer();
@@ -213,6 +228,28 @@ $(function () {
     // console.log("test");
 
   })
+
+  $('#progress').progressbar({
+        value:0,
+        max:100
+    });
+
+    $('#aaa').change(function(){
+        var param = $("#aaa").val();
+        console.log(param);
+        var color = $('.ui-progressbar-value');
+
+        if(param <=30){
+            color.css('background','red');
+        }else if(param > 30 && param <= 60){
+            color.css('background','yellow');
+        }else if(param > 60){
+            color.css('background','green');
+        }
+        $('#progress').progressbar({
+            value:parseInt(param)
+        });
+    });
 
 
 
