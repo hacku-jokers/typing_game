@@ -124,6 +124,12 @@ body {
 #elapsed_time {
   font-size: 50px;
 }
+#progress {
+  background-color: #31B404;
+  display: none;
+}
+progress::-webkit-progress-value {
+}
 .done #result-wrapper {
   display: block;
   position: relative;

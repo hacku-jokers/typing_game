@@ -89,6 +89,9 @@
         $('#countdown_timer').hide();
         $('#openModal').fadeIn();
         $('#elapsed_time').fadeIn();
+        $('#progress').fadeIn();
+
+
       });
       clearTimeout(timerId);
      }
@@ -214,4 +217,3 @@ $(function () {
 
 
 });
-
