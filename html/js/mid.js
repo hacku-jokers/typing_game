@@ -87,8 +87,6 @@
 				$('#openModal').fadeIn();
 				$('#elapsed_time').fadeIn();
 				$('#progress').fadeIn();
-
-
 			});
 			clearTimeout(timerId);
 		 }
@@ -172,7 +170,7 @@
 		}
 		str_len++;
 		console.log(e.key);
-		if (e.key === "Shift"){ // shift
+		if (e.key.length >  1){ // shift
 			str_len--;
 			return;
 		}
