@@ -6,7 +6,7 @@ body {
 }
 
 #target {
-  font-size: 50px;
+  font-size: 80px;
   letter-spacing: 10px;
   padding-top: 10px;
   border-radius: 10px;
@@ -125,19 +125,8 @@ body {
   font-size: 50px;
 }
 #progress {
-  /* background-color: #31B404; */
   display: none;
-  /* background-image: linear-gradient(
-    -45deg,
-    #fff 25%,
-    #31B404 25%, #31B404 50%,
-    #fff 50%, #fff 75%,
-    #31B404 75%, #31B404
-  );   */
-  /* background-size: 8px 8px;
-  width: 800px;
-  height: 20px;
-  padding: 10px; */
+
 
 }
 progress::-webkit-progress-value {
@@ -154,7 +143,7 @@ progress::-webkit-progress-value {
   position: absolute;
   right: 0;
   bottom: 0;
-  
+
 }
 .done .game {
   display: none;
@@ -201,6 +190,10 @@ progress::-webkit-progress-value {
 .openModal {
   display: none;
 }
+.description {
+  font-size: 80px;
+}
+
 
 /* 以下ボタンスタイル */
 
