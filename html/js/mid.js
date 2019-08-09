@@ -17,6 +17,7 @@
 	let startGameTime;
 	let isPlaying = false;
 	let len;
+	let question_data;
 
 
 	const target = document.getElementById('target');
@@ -151,6 +152,9 @@
 			var rand = Math.floor(Math.random() * len);
 			word = data[rand].answer;
 			disc = data[rand].discription;
+			question_data = data;
+			console.log(question_data);
+			
 		}); 
 
 		startTime = Date.now();
@@ -159,13 +163,17 @@
 
 	}
 
-	window.addEventListener('keyup', e => {
+	window.addEventListener('keydown', e => {
 		if (isPlaying !== true) {
 			return;
 		}
 		str_len++;
 		console.log(e.key);
-		if (e.key === word[loc]) { // 正解だった場合
+		if (e.key === "Shift"){ // shift
+			str_len--;
+			return;
+		}
+		else if (e.key === word[loc]) { // 正解だった場合
 			loc++;
 			score++;
 			if (loc === word.length) {
@@ -183,8 +191,8 @@
 					add_missdata(word);
 				}
 				var rand = Math.floor(Math.random() * len);
-				word = data[rand].answer;
-				disc = data[rand].discription;
+				word = question_data[rand].answer;
+				disc = question_data[rand].discription;
 				str_len = 0;
 				score = 0;
 				// $('#openModal').fadeOut();
@@ -199,6 +207,8 @@
 			}
 				$('#badArea').removeClass('AreaHide');
 			miss++;
+			console.log("miss_count");
+			
 			// missLabel.textContent = miss;
 		}
 	});
