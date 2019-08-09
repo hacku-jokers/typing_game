@@ -216,6 +216,7 @@
 	function add_missdata(miss_ans){
 		var messagesRef = firebase.database().ref('/html');
 		messagesRef.push(miss_ans);
+		
 		// console.log(miss_ans);
 	}
 }
