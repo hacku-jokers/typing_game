@@ -147,6 +147,15 @@ progress::-webkit-progress-value {
   position: relative;
 
 }
+.game {
+  position: relative;
+}
+.openModal {
+  position: absolute;
+  right: 0;
+  bottom: -100%;
+  
+}
 .done .game {
   display: none;
   position: absolute;

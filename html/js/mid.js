@@ -3,7 +3,7 @@
 	const words = [];
 
 	let word;
-	let disc;
+	let desc;
 	let loc;
 	let str_len; //　文字列
 	let total_score;
@@ -21,6 +21,7 @@
 
 
 	const target = document.getElementById('target');
+	const description = document.getElementById('description');
 	const scoreLabel = document.getElementById('score');
 	const missLabel = document.getElementById('miss');
 	const timerLabel = document.getElementById('timer');
@@ -28,6 +29,7 @@
 	const t_s = document.getElementById('score_str'); //total_score
 	const tol_q = document.getElementById('tol_question');
 	const s_rate_str = document.getElementById('score_rate');
+	const missPoint = document.getElementById('miss_point');
 
 
 
@@ -38,6 +40,7 @@
 			placeholder += '_';
 		}
 		target.textContent = placeholder + word.substring(loc);
+		description.textContent = "意味：" + desc;
 	}
 
 
@@ -151,7 +154,7 @@
 			// console.log(len);
 			var rand = Math.floor(Math.random() * len);
 			word = data[rand].answer;
-			disc = data[rand].discription;
+			desc = data[rand].discription;
 			question_data = data;
 			console.log(question_data);
 			
@@ -192,7 +195,7 @@
 				}
 				var rand = Math.floor(Math.random() * len);
 				word = question_data[rand].answer;
-				disc = question_data[rand].discription;
+				desc = question_data[rand].discription;
 				str_len = 0;
 				score = 0;
 				// $('#openModal').fadeOut();
@@ -207,6 +210,7 @@
 			}
 				$('#badArea').removeClass('AreaHide');
 			miss++;
+			missPoint.textContent = "MISS：✕ " + e.key + " -> ◯ " + word[loc]; 
 			console.log("miss_count");
 			
 			// missLabel.textContent = miss;
