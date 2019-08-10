@@ -147,7 +147,7 @@
 		total_question = 1;
 		// scoreLabel.textContent = score;
 		// missLabel.textContent = miss;
-		$.get("https://yuma1100.github.io/hack_u_question/question/HTML.json", function(data){ 
+		$.get("https://yuma1100.github.io/hack_u_question/question/HTML.json", function(data){
 			len = Object.keys(data).length;
 			// console.log(len);
 			var rand = Math.floor(Math.random() * len);
@@ -155,8 +155,8 @@
 			desc = data[rand].discription;
 			question_data = data;
 			console.log(question_data);
-			
-		}); 
+
+		});
 
 		startTime = Date.now();
 		startTimer();
@@ -208,9 +208,10 @@
 			}
 				$('#badArea').removeClass('AreaHide');
 			miss++;
-			missPoint.textContent = "MISS：✕ " + e.key + " -> ◯ " + word[loc]; 
+			missPoint.textContent = "間違えた文字:" + e.key
+			+"本来の文字:" + word[loc]; 
 			console.log("miss_count");
-			
+
 			// missLabel.textContent = miss;
 		}
 	});
@@ -218,7 +219,7 @@
 	function add_missdata(miss_ans){
 		var messagesRef = firebase.database().ref('/html');
 		messagesRef.push(miss_ans);
-		
+
 		// console.log(miss_ans);
 	}
 }

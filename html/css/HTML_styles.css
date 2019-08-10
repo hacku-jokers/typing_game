@@ -223,9 +223,15 @@ progress::-webkit-progress-value {
 .judge img{
   width: 250px;
 }
+.miss_point {
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 .judgeArea {
   position: absolute;
-  left:0;
+  left: 0;
   bottom: -60px;
   text-align: left;
 }
