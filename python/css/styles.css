@@ -253,3 +253,7 @@ progress::-webkit-progress-value {
 #judge_system{
   display: none;
 }
+
+.question{
+  display: none;
+}

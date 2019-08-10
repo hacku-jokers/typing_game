@@ -92,6 +92,7 @@
         $('#ansSend').fadeIn();
         $('#elapsed_time').fadeIn();
         $('#progress').fadeIn();
+        $('#question').fadeIn();
 
 
       });
