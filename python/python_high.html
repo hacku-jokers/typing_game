@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Typing Game</title>
-	<link rel="stylesheet" href="./css/HTML_styles.css">
+	<title>python 上級</title>
+	<link rel="stylesheet" href="./css/styles.css">
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
@@ -12,11 +12,35 @@
 	<!-- <div id="gostbtn">target</div> -->
 	<div class="game">
 		<div id="progress"></div>
+		<div id="question" class="question">
+		<p >問題:</p>
+		<pre>
+すべての角が直角の四角形の土地がある。この国では面積がそのまま土地の価値になっているが、正方形の場合は価値が2倍になる。土地の各辺の情報a,bが与えられるので、土地の価値Vを出力しなさい。
+
+入力形式 a b
+出力形式 V
+
+例1:
+Input    3 5
+Output  15
+例2：
+Input    7 7
+Output  98
+				
+		</pre>
+		</div>
+		<div id="editor" class="edit" style="height: 300px">a,b = map(int,input().split())</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 		<!-- <progress id="progress" value="50" max="100"><span id="percent">0</span>50%</progress> -->
 
 
 
 		<p id="target"></p>
+		<p id="judge_system">採点中</p>		
+		<button id="ansSend" class="ansSend">採点</button>
 		<button class="openModal" id="openModal">中止</button>
 		<button type="button" class="openModal" id="fadein" name="button">2</button>
 		<section id="modalArea" class="modalArea">
@@ -42,6 +66,7 @@
 			<span id="countdown_timer"></span>
 		</p>
 		<p id="elapsed_time" class="e_time">あと<span id="timer"></span>秒</p>
+		<p id="miss_point"></p>
 		<section id="goodArea" class="judgeArea AreaHide">
 			<div id="judge_good" class="judge">
 				<img src="../images/good.png" alt="正解">
@@ -62,22 +87,20 @@
 	<div id='result-wrapper'>
 		<p id="result">結果</p>
 		<p id="result1"><span id="score_str"></span>問/<span id="tol_question">0</span>問</p>
-		<p id="result2">素晴らしい</p>
-		<p id="result3"><span style='font-size:25px;'>あなたの正答率： </span><br><span id="score_rate">0</span>％</p>
+		<p id="result2">正解</p>
 		<btn id="result4">再挑戦</btn>
-		<btn id="result5">復習</btn>
-		<btn id="result7" onclick="window.location.href=('./miss_html.html')">間違えた問題</btn>
 		<btn id="result6" 　onClick="window.open('index.html')">戻る</btn>
 	</div>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-	<script src="./js/HTML_main.js"></script>
+	<script src="./js/main.js"></script>
 	<!-- <div class="stage"> -->
 	<!-- <div id="cards">
 			<div class="card">check</div>
 			<div class="card">retry</div> -->
 	<!-- </div> -->
 	</div>
+	<script src="./js/judge.js"></script>    
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
 

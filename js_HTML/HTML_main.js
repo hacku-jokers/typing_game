@@ -19,7 +19,7 @@
   let score;
   let miss;
   let score_rate;
-  const timeLimit = 500 * 1000;
+  const timeLimit = 5 * 1000;
   const timeReady = 4 * 1000;
   let startTime;
   let startGameTime;
@@ -56,7 +56,7 @@
     tol_q.textContent = total_question;
     score_rate = Math.round(total_score/total_question * 100);
     s_rate_str.textContent = score_rate;
-    // get_missdata();
+    get_missdata();
     //alert(`${score}文字正解, ${miss}文字間違え, ${accuracy.toFixed(2)}%の正答率です!`);
   }
 
@@ -68,14 +68,13 @@
       countLabel.textContent = "START!";
     }else {
       if (timeLeft < 4000) {
-        countLabel.innerHTML = "<img class='img_3' src ='../img_3.png'>"
+        countLabel.innerHTML = "<img class='img_3' src ='img_3.png'>"
       }
       if (timeLeft < 3000) {
-        countLabel.innerHTML = "<img class='img_2' src ='../img_2.png'>"
+        countLabel.innerHTML = "<img class='img_2' src ='img_2.png'>"
       }
       if (timeLeft < 2000) {
-        countLabel.innerHTML = "<img class='img_1' src ='../img_1.png'>"
-
+        countLabel.innerHTML = "<img class='img_1' src ='img_1.png'>"
       }
       // countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
     }
@@ -83,18 +82,14 @@
       startTimer();
     }, 100);
     if (timeLeft < 0) {
-      isPlaying = true;
       startGame();
       $(function(){
         $('#countdown_timer').hide();
-        $('#editor').fadeIn();
         $('#openModal').fadeIn();
-        $('#ansSend').fadeIn();
         $('#elapsed_time').fadeIn();
         $('#progress').fadeIn();
-        $('#question').fadeIn();
 
-
+        // $('#progress');
       });
       clearTimeout(timerId);
      }
@@ -102,21 +97,6 @@
 
   function updateTimer() {
     const timeLeft = startGameTime + timeLimit - Date.now();
-    const progress_num = 100- timeLeft/timeLimit*100;
-    // progressbarについて
-    var color = $('.ui-progressbar-value');
-
-    if(progress_num <=30){
-        color.css('background','green');
-    }else if(progress_num > 30 && progress_num <= 60){
-        color.css('background','yellow');
-    }else if(progress_num > 60){
-        color.css('background','red');
-    }
-    $('#progress').progressbar({
-        value:parseInt(progress_num)
-    });
-    // console.log(progress_num);
     timerLabel.textContent = (timeLeft / 1000).toFixed(0);
     const timerId = setTimeout(() => {
       updateTimer();
@@ -129,7 +109,7 @@
   }
 
   function startGame(){
-    // updateTarget();
+    updateTarget();
     startGameTime = Date.now();
     updateTimer();
   }
@@ -140,6 +120,7 @@
     if (isPlaying === true) {
       return;
     }
+    isPlaying = true;
 
     // console.log(btn);
 
@@ -163,6 +144,39 @@
 
   }
 
+  window.addEventListener('keyup', e => {
+    if (isPlaying !== true) {
+      return;
+    }
+    str_len++;
+    if (e.key === word[loc]) { // 正解だった場合
+      loc++;
+      score++;
+      if (loc === word.length) {
+        console.log("str"+str_len);
+        console.log("正解"+score);
+        loc = 0;
+        total_question++;
+        if(score === str_len){
+          total_score++;
+        }else{
+          add_missdata(word);
+        }
+        word = words[Math.floor(Math.random() * words.length)];
+        str_len = 0;
+        score = 0;
+        // $('#progress').fadeOut();
+        // $('#elapsed_time').fadeOut();
+
+      }
+      // scoreLabel.textContent = score;
+      updateTarget();
+    } else {
+      miss++;
+      // missLabel.textContent = miss;
+    }
+  });
+
   function add_missdata(miss_ans){
     var messagesRef = firebase.database().ref('/html');
     messagesRef.push(miss_ans);
@@ -178,6 +192,7 @@ $(function () {
     $('#modalArea').fadeOut();
   });
 
+
   $('#result6').click(function(){
     console.log("push");
     window.location.href="./index.html";
@@ -190,29 +205,5 @@ $(function () {
     // console.log("test");
 
   })
-
-  $('#progress').progressbar({
-        value:0,
-        max:100
-    });
-
-    $('#aaa').change(function(){
-        var param = $("#aaa").val();
-        console.log(param);
-        var color = $('.ui-progressbar-value');
-
-        if(param <=30){
-            color.css('background','red');
-        }else if(param > 30 && param <= 60){
-            color.css('background','yellow');
-        }else if(param > 60){
-            color.css('background','green');
-        }
-        $('#progress').progressbar({
-            value:parseInt(param)
-        });
-    });
-
-
 
 });

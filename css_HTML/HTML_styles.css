@@ -6,7 +6,7 @@ body {
 }
 
 #target {
-  font-size: 80px;
+  font-size: 50px;
   letter-spacing: 10px;
   padding-top: 10px;
   border-radius: 10px;
@@ -28,6 +28,10 @@ body {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+#progress {
+  /* font-size: 100px; */
 }
 
 #btn,#btn1,#btn2 {
@@ -126,23 +130,10 @@ body {
 }
 #progress {
   display: none;
-
-
-}
-progress::-webkit-progress-value {
 }
 .done #result-wrapper {
   display: block;
   position: relative;
-
-}
-.game {
-  position: relative;
-}
-.openModal {
-  position: absolute;
-  right: 0;
-  bottom: 0;
 
 }
 .done .game {
@@ -190,10 +181,6 @@ progress::-webkit-progress-value {
 .openModal {
   display: none;
 }
-.description {
-  font-size: 80px;
-}
-
 
 /* 以下ボタンスタイル */
 
@@ -207,25 +194,3 @@ progress::-webkit-progress-value {
   left: 50%;
   transform:translate(-50%,-50%);
 } */
-
-/* ジャッジcss */
-.judgeArea {
-  z-index: 10; /*サイトによってここの数値は調整 */
-  /* top: 0; */
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.AreaHide {
-  display: none;
-}
-
-.judge img{
-  width: 250px;
-}
-.judgeArea {
-  position: absolute;
-  left:0;
-  bottom: -60px;
-  text-align: left;
-}

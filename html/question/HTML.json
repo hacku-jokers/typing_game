@@ -1,0 +1,346 @@
+{
+    "1": {
+        "answer": "<html>",
+        "discription": "文書のルート要素"
+    },
+    "2": {
+        "answer": "<head>",
+        "discription": "文書のヘッダ"
+    },
+    "3": {
+        "answer": "<body>",
+        "discription": "文書の本体"
+    },
+    "4": {
+        "answer": "<title>",
+        "discription": "文書のタイトル"
+    },
+    "5": {
+        "answer": "<meta>",
+        "discription": "文書に関する情報（メタ情報）"
+    },
+    "6": {
+        "answer": "<div>",
+        "discription": "範囲の指定（ブロックレベル）"
+    },
+    "7": {
+        "answer": "<span>",
+        "discription": "範囲の指定（インライン）"
+    },
+    "8": {
+        "answer": "<h1>",
+        "discription": "見出し"
+    },
+    "9": {
+        "answer": "<address>",
+        "discription": "作者情報・連絡先"
+    },
+    "10": {
+        "answer": "<p>",
+        "discription": "段落"
+    },
+    "11": {
+        "answer": "<br>",
+        "discription": "改行"
+    },
+    "12": {
+        "answer": "<em>",
+        "discription": "強調"
+    },
+    "13": {
+        "answer": "<strong>",
+        "discription": "より強い強調"
+    },
+    "14": {
+        "answer": "<del>",
+        "discription": "削除されたテキスト"
+    },
+    "15": {
+        "answer": "<ins>",
+        "discription": "追加されたテキスト"
+    },
+    "16": {
+        "answer": "<abbr>",
+        "discription": "略語（全般）"
+    },
+    "17": {
+        "answer": "<acronym>",
+        "discription": "略語（頭字語）"
+    },
+    "18": {
+        "answer": "<dfn>",
+        "discription": "定義する用語"
+    },
+    "19": {
+        "answer": "<blockquote>",
+        "discription": "長文の引用（ブロックレベル）"
+    },
+    "20": {
+        "answer": "<q>",
+        "discription": "短文の引用（インライン）"
+    },
+    "21": {
+        "answer": "<cite>",
+        "discription": "引用元（出典・参照先）"
+    },
+    "22": {
+        "answer": "<sup>",
+        "discription": "上付き文字"
+    },
+    "23": {
+        "answer": "<sub>",
+        "discription": "下付き文字"
+    },
+    "24": {
+        "answer": "<pre>",
+        "discription": "整形済みテキスト"
+    },
+    "25": {
+        "answer": "<code>",
+        "discription": "ソースコード"
+    },
+    "26": {
+        "answer": "<var>",
+        "discription": "変数・引数"
+    },
+    "27": {
+        "answer": "<kbd>",
+        "discription": "入力する文字"
+    },
+    "28": {
+        "answer": "<samp>",
+        "discription": "出力サンプル"
+    },
+    "29": {
+        "answer": "<bdo>",
+        "discription": "書字方向"
+    },
+    "30": {
+        "answer": "<font>",
+        "discription": "フォントのサイズ・色・種類"
+    },
+    "31": {
+        "answer": "<basefont>",
+        "discription": "基準となるフォントサイズ"
+    },
+    "32": {
+        "answer": "<big>",
+        "discription": "大きめの文字"
+    },
+    "33": {
+        "answer": "<small>",
+        "discription": "小さめの文字"
+    },
+    "34": {
+        "answer": "<b>",
+        "discription": "太字"
+    },
+    "35": {
+        "answer": "<i>",
+        "discription": "イタリック体"
+    },
+    "36": {
+        "answer": "<s>",
+        "discription": "取り消し線"
+    },
+    "37": {
+        "answer": "<strike>",
+        "discription": "取り消し線"
+    },
+    "38": {
+        "answer": "<u>",
+        "discription": "下線"
+    },
+    "39": {
+        "answer": "<tt>",
+        "discription": "等幅フォント"
+    },
+    "40": {
+        "answer": "<center>",
+        "discription": "センタリング"
+    },
+    "41": {
+        "answer": "<hr>",
+        "discription": "水平線"
+    },
+    "42": {
+        "answer": "<a>",
+        "discription": "リンクのアンカー"
+    },
+    "43": {
+        "answer": "<base>",
+        "discription": "基準となるURI"
+    },
+    "44": {
+        "answer": "<link>",
+        "discription": "関連文書との関係"
+    },
+    "45": {
+        "answer": "<ul>",
+        "discription": "順不同のリスト"
+    },
+    "46": {
+        "answer": "<ol>",
+        "discription": "順序付きリスト"
+    },
+    "47": {
+        "answer": "<li>",
+        "discription": "リストの項目"
+    },
+    "48": {
+        "answer": "<dl>",
+        "discription": "定義型リスト"
+    },
+    "49": {
+        "answer": "<dt>",
+        "discription": "定義する用語"
+    },
+    "50": {
+        "answer": "<dd>",
+        "discription": "用語に対する説明"
+    },
+    "51": {
+        "answer": "<dir>",
+        "discription": "ディレクトリリスト"
+    },
+    "52": {
+        "answer": "<menu>",
+        "discription": "メニューリスト"
+    },
+    "53": {
+        "answer": "<img>",
+        "discription": "画像の埋め込み"
+    },
+    "54": {
+        "answer": "<map>",
+        "discription": "イメージマップ"
+    },
+    "55": {
+        "answer": "<area>",
+        "discription": "イメージマップの領域設定"
+    },
+    "56": {
+        "answer": "<object>",
+        "discription": "オブジェクトの埋め込み"
+    },
+    "57": {
+        "answer": "<applet>",
+        "discription": "Javaアプレットの埋め込み"
+    },
+    "58": {
+        "answer": "<param>",
+        "discription": "パラメータの設定"
+    },
+    "59": {
+        "answer": "<table>",
+        "discription": "表"
+    },
+    "60": {
+        "answer": "<caption>",
+        "discription": "表のタイトル"
+    },
+    "61": {
+        "answer": "<thead>",
+        "discription": "表のヘッダ"
+    },
+    "62": {
+        "answer": "<tfoot>",
+        "discription": "表のフッタ"
+    },
+    "63": {
+        "answer": "<tbody>",
+        "discription": "表の本体"
+    },
+    "64": {
+        "answer": "<colgroup>",
+        "discription": "列のグループ化"
+    },
+    "65": {
+        "answer": "<col>",
+        "discription": "列の設定"
+    },
+    "66": {
+        "answer": "<tr>",
+        "discription": "表の行"
+    },
+    "67": {
+        "answer": "<td>",
+        "discription": "データ用のセル"
+    },
+    "68": {
+        "answer": "<th>",
+        "discription": "見出し用のセル"
+    },
+    "69": {
+        "answer": "<frameset>",
+        "discription": "ウィンドウの分割"
+    },
+    "70": {
+        "answer": "<frame>",
+        "discription": "フレーム内の設定"
+    },
+    "71": {
+        "answer": "<noframes>",
+        "discription": "フレームの代替内容"
+    },
+    "72": {
+        "answer": "<iframe>",
+        "discription": "インラインフレーム"
+    },
+    "73": {
+        "answer": "<form>",
+        "discription": "入力フォーム"
+    },
+    "74": {
+        "answer": "<input>",
+        "discription": "フォームの部品"
+    },
+    "75": {
+        "answer": "<textarea>",
+        "discription": "複数行の入力欄"
+    },
+    "76": {
+        "answer": "<select>",
+        "discription": "セレクトボックス"
+    },
+    "77": {
+        "answer": "<option>",
+        "discription": "選択肢"
+    },
+    "78": {
+        "answer": "<optgroup>",
+        "discription": "選択肢のグループ化"
+    },
+    "79": {
+        "answer": "<button>",
+        "discription": "ボタン"
+    },
+    "80": {
+        "answer": "<label>",
+        "discription": "部品とラベルの関連付け"
+    },
+    "81": {
+        "answer": "<fieldset>",
+        "discription": "フォーム部品のグループ化"
+    },
+    "82": {
+        "answer": "<legend>",
+        "discription": "部品グループのラベル"
+    },
+    "83": {
+        "answer": "<isindex>",
+        "discription": "テキスト入力欄"
+    },
+    "84": {
+        "answer": "<style>",
+        "discription": "スタイルシート"
+    },
+    "85": {
+        "answer": "<script>",
+        "discription": "スクリプト"
+    },
+    "86": {
+        "answer": "<noscript>",
+        "discription": "スクリプトの代替内容"
+    }
+}
