@@ -10,14 +10,6 @@
 
 	<!-- <a href="">2を始める</a> -->
 	<style>
-		.rainbow img{
-			z-index: 0;
-			bottom: -37%;
-    		left: 54%;
-			position: absolute;
-			width: 900px;
-			height: 900px;
-		}
 
 		#Welcome {
 			position: relative;
@@ -135,30 +127,20 @@
 		.top {
 			background-image: url("./rainbow.png");
 		}
-
-		@keyframes rotate_anime {
-			0% {
-				transform: rotateZ(0deg);
-				/* アニメーションの進みが0%の時の状態 */
-			}
-
-			100% {
-				transform: rotateZ(360deg);
-				/* アニメーションの進みが100%の時の状態 */
-			}
-		}
-		.rotate_rainbow {
-			animation: rotate_anime 20s infinite; /* rotate_animeを1秒かけて実行するのを繰り返す */
-			/* transform-origin: 50% 50%;  */
-	/* transform-origin: center bottom; */
+		.video{
+			position: absolute;
+  			top: 100px;
+  			left: 300px;
+  			width: auto;
+  			height: auto;
+  			min-width: 100%;
+  			min-height: 100%;
+			z-index: -1;  
 		}
 	</style>
-
-	<div class="rainbow">
-		<div class="rotate_rainbow">
-		<img src="rainbow.png">
-		</div>
-	</div>
+<div class="video">
+<video src="rainbow.mp4" autoplay muted loop></video>
+</div>
 	<p id="Welcome">「Tip Type」へようこそ！</p><br>
 	<p id="Welcome2">学びたい項目を選びましょう。</p><br>
 	<btn id="html" onClick="window.open('./html/index.html')">HTML</btn>
