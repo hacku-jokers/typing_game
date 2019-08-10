@@ -170,7 +170,7 @@
 		}
 		str_len++;
 		console.log(e.key);
-		if (e.key.length >  1){ // shift
+		if (e.key.length >  1){ // 文字入力以外を取り除く
 			str_len--;
 			return;
 		}

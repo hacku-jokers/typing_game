@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>python 上級</title>
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body id='body'>
+	<!-- <div id="gostbtn">target</div> -->
+	<div class="game">
+        <div id="progress"></div>
+        <p id="quesiton">問題</p>
+
+        <div id="editor" class="edit" style="height: 300px">a,b = map(int,input().split())</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+		<!-- <progress id="progress" value="50" max="100"><span id="percent">0</span>50%</progress> -->
+
+
+
+		<p id="target"></p>
+		<p id="judge_system">採点中</p>		
+        <button id="ansSend" class="ansSend">採点</button>
+		<button class="openModal" id="openModal">中止</button>
+		<button type="button" class="openModal" id="fadein" name="button">2</button>
+		<section id="modalArea" class="modalArea">
+			<div id="modalBg" class="modalBg"></div>
+			<div class="modalWrapper">
+				<div class="modalContents">
+					<h1>本当に中止しますか？</h1>
+					<p>中止するとこの履歴は無くなります。</p>
+					<button onclick="window.location.href=('./index.html');">中止する</button>
+				</div>
+				<div id="closeModal" class="closeModal">×</div>
+			</div>
+		</section>
+
+
+		<!-- <p class="info">
+		<span id="score"></span>
+	</p>
+	<p class="info2">
+		 <span id="miss"></span>
+	</p> -->
+		<p class="info3">
+			<span id="countdown_timer"></span>
+		</p>
+		<p id="elapsed_time" class="e_time">あと<span id="timer"></span>秒</p>
+		<p id="miss_point"></p>
+		<section id="goodArea" class="judgeArea AreaHide">
+			<div id="judge_good" class="judge">
+				<img src="../images/good.png" alt="正解">
+			</div>
+		</section>
+		<section id="badArea" class="judgeArea AreaHide">
+			<div id="judge_bad" class="judge">
+				<img src="../images/bad.png" alt="不正解">
+			</div>
+		</section>
+	</div>
+
+	<!-- <btn id="btn">タイピング初級編を始める</btn><br>
+	 <btn id="btn1">タイピング中級編を始める</btn><br>
+	 <btn id="btn2">タイピング上級編を始める</btn> -->
+
+
+	<div id='result-wrapper'>
+		<p id="result">結果</p>
+		<p id="result1"><span id="score_str"></span>問/<span id="tol_question">0</span>問</p>
+		<p id="result2">正解</p>
+		<btn id="result4">再挑戦</btn>
+		<btn id="result6" 　onClick="window.open('index.html')">戻る</btn>
+	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script src="./js/main.js"></script>
+	<!-- <div class="stage"> -->
+	<!-- <div id="cards">
+			<div class="card">check</div>
+			<div class="card">retry</div> -->
+	<!-- </div> -->
+    </div>
+    <script src="./js/judge.js"></script>    
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#config-web-app -->
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyA9mh7-YZS28WSoOyzE79COw3IWmtQ4R8Q",
+			authDomain: "hackutyping.firebaseapp.com",
+			databaseURL: "https://hackutyping.firebaseio.com",
+			projectId: "hackutyping",
+			storageBucket: "hackutyping.appspot.com",
+			messagingSenderId: "571576721839",
+			appId: "1:571576721839:web:97a9b90a92fd63d9"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+	<div id='messagesDiv'></div>
+	<!-- <input type='text' id='nameInput' placeholder='Name'>
+<input type='text' id='messageInput' placeholder='Message...'> -->
+	<script type='text/javascript'>
+	// var messagesRef = firebase.database().ref('/html');
+
+	// $('#messageInput').keypress(function (e) {
+	//   if (e.keyCode == 13) {
+	//     var name = $('#nameInput').val();
+	//     var text = $('#messageInput').val();
+	//     messagesRef.push(name);
+	//     $('#messageInput').val('');
+	//   }
+	// });
+
+	// const firebaseRef = firebase.database().ref(`/html`);
+	// firebaseRef.on("value", function(snapshot) {
+	//   const html_data = snapshot.val();
+	//   console.log(JSON.stringify(html_data));
+	//   for (const key in html_data) {
+	//     if (html_data.hasOwnProperty(key)) {
+	//       const element = html_data[key];
+	//       console.log(element);
+
+
+	//     }
+	//   }
+
+
+	// });
+//   messagesRef.on('child_added', function (snapshot) {
+//     var message = snapshot.val();
+// console.log(message.name);
+//     if (message.name) {
+//       $('<div/>').text(message.text).prepend($('<em/>').text(message.name+': ')).appendTo($('#messagesDiv'));
+//       $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+//     }
+	// });
+	</script>
+</body>
+
+</html>
