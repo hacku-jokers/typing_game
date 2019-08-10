@@ -7,10 +7,11 @@
 
 
 <body>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 	<!-- <a href="">2を始める</a> -->
 	<style>
-
 		#Welcome {
 			position: relative;
 			z-index: 9999;
@@ -127,31 +128,51 @@
 		.top {
 			background-image: url("./rainbow.png");
 		}
-		.video{
+
+		.video {
 			position: absolute;
-  			top: 100px;
-  			left: 300px;
-  			width: auto;
-  			height: auto;
-  			min-width: 100%;
-  			min-height: 100%;
-			z-index: -1;  
+			top: 100px;
+			left: 300px;
+			width: auto;
+			height: auto;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: -1;
+		}
+		#main {
+			display: none;
+		}
+		#top_icon {
+			/* position: absolute; */
+			margin: auto;
+			left: 50%;
 		}
 	</style>
-<div class="video">
-<video src="rainbow.mp4" autoplay muted loop></video>
-</div>
-	<p id="Welcome">「Tip Type」へようこそ！</p><br>
-	<p id="Welcome2">学びたい項目を選びましょう。</p><br>
-	<btn id="html" onClick="window.open('./html/index.html')">HTML</btn>
-	<btn id="Javascript">JavaScript</btn>
-	<btn id="css">CSS</btn><br>
-	<btn id="swift">Swift</btn>
-	<btn id="Python">Python</btn>
-	<btn id="SQL">SQL</btn><br>
-	<btn id="html2">使い方</btn>
-	<btn id="html3">復習</btn>
-	<btn id="html4" onClick="window.open('settings.html')">設定</btn>
-<body>
+	<img src="./images/icon.png" alt="" srcset="" id="top_icon">
+	<div id="main">
+		<div class="video">
+			<video src="rainbow.mp4" autoplay muted loop></video>
+		</div>
+		<p id="Welcome">「Tip Type」へようこそ！</p><br>
+		<p id="Welcome2">学びたい項目を選びましょう。</p><br>
+		<btn id="html" onClick="window.open('./html/index.html')">HTML</btn>
+		<btn id="Javascript">JavaScript</btn>
+		<btn id="css">CSS</btn><br>
+		<btn id="swift">Swift</btn>
+		<btn id="Python">Python</btn>
+		<btn id="SQL">SQL</btn><br>
+		<btn id="html2">使い方</btn>
+		<btn id="html3">復習</btn>
+		<btn id="html4" onClick="window.open('settings.html')">設定</btn>
+	</div>
+	<script>
+		window.onload = function(){
+			$("#top_icon").fadeOut(3000,function(){
+				$("#main").fadeIn(1000);
+			});
+		}
+	</script>
+
+	<body>
 
 </html>
