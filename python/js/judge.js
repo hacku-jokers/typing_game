@@ -70,16 +70,19 @@ function judge(code,inputValue) {
 	if(count == 1){
 		if(ans == 15){
 			console.log("テスト"+count+"成功");
+			judgeNow.textContent = "テスト"+count+"通過";
 			return true;
 		}
 	}else if(count == 2){
 		if(ans == 98){
 			console.log("テスト"+count+"成功");
+			judgeNow.textContent = "テスト"+count+"通過";
 			return true;
 		}
 	}else if(count == 3){
 		if(ans == 495){
 			console.log("テスト"+count+"成功");
+			judgeNow.textContent = "テスト"+count+"通過";
 			return true;
 		}
 	}
@@ -93,36 +96,38 @@ function judge(code,inputValue) {
 }
 // const edi = document.getElementById("editor");
 document.getElementById("ansSend").onclick = function(){
-	$("#judge_system").fadeIn();
-	let text = editor.getValue();
-	console.log(text);
-	
-	var pass = 0;
-	if(judge(text,"3 5")){
-		pass++;
-	}
-	sleep(1000)
-	if(judge(text,"7 7")){
-		pass++;
-	}
-	sleep(1000)
-	if(judge(text,"15 33")){
-		pass++;
-	}
-	// sleep(1000)
-	count = 0;
-	
+	$("#judge_system").fadeIn(100,function () { 
+		let text = editor.getValue();
+		console.log(text);
+		
+		var pass = 0;
+		if(judge(text,"3 5")){
+			pass++;
+		}
+		sleep(1000)
+		if(judge(text,"7 7")){
+			pass++;
+		}
+		sleep(1000)
+		if(judge(text,"15 33")){
+			pass++;
+		}
+		// sleep(1000)
+		count = 0;
+		
 
-	if(pass == 3){
-		document.getElementById("body").classList.add("done");
-	}
-	else if(pass != 3 && miss_ans != null){
-		console.log(miss_ans);
-		judgeNow.textContent = miss_ans;
-	}else if(pass != 3){
-		// console.log("計算が違います");
-		judgeNow.textContent = "計算が違います";
-	}
+		if(pass == 3){
+			document.getElementById("body").classList.add("done");
+		}
+		else if(pass != 3 && miss_ans != null){
+			console.log(miss_ans);
+			judgeNow.textContent = miss_ans;
+		}else if(pass != 3){
+			// console.log("計算が違います");
+			judgeNow.textContent = "計算が違います";
+		}
+	 });
+	
 	// console.log(judge(text,"7 7"));
 	// sleep(1000);
 	// console.log(judge(text,"15 33"));
