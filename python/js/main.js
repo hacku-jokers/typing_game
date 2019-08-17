@@ -19,7 +19,7 @@
   let score;
   let miss;
   let score_rate;
-  const timeLimit = 500 * 1000;
+  const timeLimit = 300 * 1000;
   const timeReady = 4 * 1000;
   let startTime;
   let startGameTime;
