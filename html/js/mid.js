@@ -51,8 +51,9 @@
 		document.getElementById("body").classList.add("done");
 		t_s.textContent = total_score;
 		tol_q.textContent = total_question;
-		score_rate = Math.round(total_score/total_question * 100);
+		score_rate = Math.round(total_score / total_question * 100);
 		s_rate_str.textContent = score_rate;
+		update_score();
 		// get_missdata();
 		//alert(`${score}文字正解, ${miss}文字間違え, ${accuracy.toFixed(2)}%の正答率です!`);
 	}
@@ -63,7 +64,7 @@
 		// console.log(timeLeft);
 		if (timeLeft < 1000) {
 			countLabel.textContent = "START!";
-		}else {
+		} else {
 			if (timeLeft < 4000) {
 				countLabel.innerHTML = "<img class='img_3' src ='../img_3.png'>"
 			}
@@ -82,31 +83,31 @@
 		if (timeLeft < 0) {
 			isPlaying = true;
 			startGame();
-			$(function(){
+			$(function () {
 				$('#countdown_timer').hide();
 				$('#openModal').fadeIn();
 				$('#elapsed_time').fadeIn();
 				$('#progress').fadeIn();
 			});
 			clearTimeout(timerId);
-		 }
+		}
 	}
 
 	function updateTimer() {
 		const timeLeft = startGameTime + timeLimit - Date.now();
-		const progress_num = 100- timeLeft/timeLimit*100;
+		const progress_num = 100 - timeLeft / timeLimit * 100;
 		// progressbarについて
 		var color = $('.ui-progressbar-value');
 
-		if(progress_num <=30){
-				color.css('background','green');
-		}else if(progress_num > 30 && progress_num <= 60){
-				color.css('background','yellow');
-		}else if(progress_num > 60){
-				color.css('background','red');
+		if (progress_num <= 30) {
+			color.css('background', 'green');
+		} else if (progress_num > 30 && progress_num <= 60) {
+			color.css('background', 'yellow');
+		} else if (progress_num > 60) {
+			color.css('background', 'red');
 		}
 		$('#progress').progressbar({
-				value:parseInt(progress_num)
+			value: parseInt(progress_num)
 		});
 		// console.log(progress_num);
 		timerLabel.textContent = (timeLeft / 1000).toFixed(0);
@@ -117,10 +118,10 @@
 			isPlaying = false;
 			showResult();
 			clearTimeout(timerId);
-		 }
+		}
 	}
 
-	function startGame(){
+	function startGame() {
 		updateTarget();
 		startGameTime = Date.now();
 		updateTimer();
@@ -128,7 +129,7 @@
 
 
 
-	window.onload = function() {
+	window.onload = function () {
 		if (isPlaying === true) {
 			return;
 		}
@@ -147,7 +148,7 @@
 		total_question = 1;
 		// scoreLabel.textContent = score;
 		// missLabel.textContent = miss;
-		$.get("https://yuma1100.github.io/hack_u_question/question/HTML.json", function(data){
+		$.get("https://yuma1100.github.io/hack_u_question/question/HTML.json", function (data) {
 			len = Object.keys(data).length;
 			// console.log(len);
 			var rand = Math.floor(Math.random() * len);
@@ -170,7 +171,7 @@
 		}
 		str_len++;
 		console.log(e.key);
-		if (e.key.length >  1){ // 文字入力以外を取り除く
+		if (e.key.length > 1) { // 文字入力以外を取り除く
 			str_len--;
 			return;
 		}
@@ -178,17 +179,17 @@
 			loc++;
 			score++;
 			if (loc === word.length) {
-				console.log("str"+str_len);
-				console.log("正解"+score);
+				console.log("str" + str_len);
+				console.log("正解" + score);
 				loc = 0;
 				total_question++;
-				if(score === str_len){
+				if (score === str_len) {
 					total_score++;
-					if(!$('#badArea').hasClass('AreaHide')){
+					if (!$('#badArea').hasClass('AreaHide')) {
 						$('#badArea').addClass('AreaHide');
 					}
-						$('#goodArea').removeClass('AreaHide');
-				}else{
+					$('#goodArea').removeClass('AreaHide');
+				} else {
 					add_missdata(word);
 				}
 				var rand = Math.floor(Math.random() * len);
@@ -203,42 +204,58 @@
 			// scoreLabel.textContent = score;
 			updateTarget();
 		} else {
-			if(!$('#goodArea').hasClass('AreaHide')){
+			if (!$('#goodArea').hasClass('AreaHide')) {
 				$('#goodArea').addClass('AreaHide');
 			}
-				$('#badArea').removeClass('AreaHide');
+			$('#badArea').removeClass('AreaHide');
 			miss++;
 			missPoint.textContent = "間違えた文字:" + e.key
-			+"本来の文字:" + word[loc]; 
+				+ "本来の文字:" + word[loc];
 			console.log("miss_count");
 
 			// missLabel.textContent = miss;
 		}
 	});
 
-	function add_missdata(miss_ans){
+	function add_missdata(miss_ans) {
 		var messagesRef = firebase.database().ref('/html');
 		messagesRef.push(miss_ans);
 
 		// console.log(miss_ans);
 	}
+	function update_score() {
+		var firebaseRef = firebase.database().ref(`/html_mid_score`);
+		firebaseRef.on("value", function (snapshot) {
+			const database_score = snapshot.val();
+			for (const key in database_score) {
+				if (database_score.hasOwnProperty(key)) {
+					let max_score = database_score[key];
+					if (max_score <= score_rate) {
+						var updates = {};
+						updates['/html_mid_score/' + key] = score_rate;
+						firebase.database().ref().update(updates);
+					}
+				}
+			}
+		});
+	}
 }
 
 $(function () {
-	$('#openModal').click(function(){
-			$('#modalArea').fadeIn();
+	$('#openModal').click(function () {
+		$('#modalArea').fadeIn();
 	});
-	$('#closeModal , #modalBg').click(function(){
+	$('#closeModal , #modalBg').click(function () {
 		$('#modalArea').fadeOut();
 	});
 
-	$('#result6').click(function(){
+	$('#result6').click(function () {
 		console.log("push");
-		window.location.href="./index.html";
+		window.location.href = "./index.html";
 	})
 
 	// #btn = 初級編を選択すること
-	$('#btn').click(function(){
+	$('#btn').click(function () {
 		test();
 		// $('#openModal').fadeIn();
 		// console.log("test");
@@ -246,27 +263,27 @@ $(function () {
 	})
 
 	$('#progress').progressbar({
-				value:0,
-				max:100
+		value: 0,
+		max: 100
+	});
+
+	$('#aaa').change(function () {
+		var param = $("#aaa").val();
+		// console.log(param);
+
+		var color = $('.ui-progressbar-value');
+
+		if (param <= 30) {
+			color.css('background', 'red');
+		} else if (param > 30 && param <= 60) {
+			color.css('background', 'yellow');
+		} else if (param > 60) {
+			color.css('background', 'green');
+		}
+		$('#progress').progressbar({
+			value: parseInt(param)
 		});
-
-		$('#aaa').change(function(){
-				var param = $("#aaa").val();
-				// console.log(param);
-
-				var color = $('.ui-progressbar-value');
-
-				if(param <=30){
-						color.css('background','red');
-				}else if(param > 30 && param <= 60){
-						color.css('background','yellow');
-				}else if(param > 60){
-						color.css('background','green');
-				}
-				$('#progress').progressbar({
-						value:parseInt(param)
-				});
-		});
+	});
 
 
 
