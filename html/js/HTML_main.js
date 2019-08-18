@@ -1,15 +1,6 @@
 'use strict';
 {
-  const words = [
-    'meta',
-    'title',
-    'body',
-    'head',
-    'html',
-    'mio',
-
-
-  ];
+  const words = [];
 
   let word;
   let loc;
@@ -152,6 +143,18 @@
     total_question = 1;
     // scoreLabel.textContent = score;
     // missLabel.textContent = miss;
+
+    $.get("https://yuma1100.github.io/hack_u_question/question/HTML_Beginner.json", function(data){
+      len = Object.keys(data).length;
+      // console.log(len);
+      var rand = Math.floor(Math.random() * len);
+      word = data[rand].answer;
+      desc = data[rand].discription;
+      question_data = data;
+      console.log(question_data);
+
+    });
+
     word = words[Math.floor(Math.random() * words.length)];
 
     startTime = Date.now();

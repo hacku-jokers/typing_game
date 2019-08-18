@@ -65,13 +65,13 @@
 			countLabel.textContent = "START!";
 		}else {
 			if (timeLeft < 4000) {
-				countLabel.innerHTML = "<img class='img_3' src ='../img_3.png'>"
+				countLabel.innerHTML = "<img class='img_3' src ='../images/img_3.png'>"
 			}
 			if (timeLeft < 3000) {
-				countLabel.innerHTML = "<img class='img_2' src ='../img_2.png'>"
+				countLabel.innerHTML = "<img class='img_2' src ='../images/img_2.png'>"
 			}
 			if (timeLeft < 2000) {
-				countLabel.innerHTML = "<img class='img_1' src ='../img_1.png'>"
+				countLabel.innerHTML = "<img class='img_1' src ='../images/img_1.png'>"
 
 			}
 			// countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
@@ -147,7 +147,7 @@
 		total_question = 1;
 		// scoreLabel.textContent = score;
 		// missLabel.textContent = miss;
-		$.get("https://yuma1100.github.io/hack_u_question/question/CSS.json", function(data){ 
+		$.get("https://yuma1100.github.io/hack_u_question/question/CSS.json", function(data){
 			len = Object.keys(data).length;
 			// console.log(len);
 			var rand = Math.floor(Math.random() * len);
@@ -155,8 +155,8 @@
 			desc = data[rand].discription;
 			question_data = data;
 			console.log(question_data);
-			
-		}); 
+
+		});
 
 		startTime = Date.now();
 		startTimer();
@@ -208,9 +208,9 @@
 			}
 				$('#badArea').removeClass('AreaHide');
 			miss++;
-			missPoint.textContent = "MISS：✕ " + e.key + " -> ◯ " + word[loc]; 
+			missPoint.textContent = "MISS：✕ " + e.key + " -> ◯ " + word[loc];
 			console.log("miss_count");
-			
+
 			// missLabel.textContent = miss;
 		}
 	});
@@ -218,7 +218,7 @@
 	function add_missdata(miss_ans){
 		var messagesRef = firebase.database().ref('/html');
 		messagesRef.push(miss_ans);
-		
+
 		// console.log(miss_ans);
 	}
 }

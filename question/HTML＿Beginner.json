@@ -1,0 +1,74 @@
+{
+  "1":{"answer":"<html>",
+  "discription":"文書のルート要素"},
+
+  "2":{"answer":"<head>",
+  "discription":"文書のヘッダ"},
+
+  "3":{"answer":"<body>",
+  "discription":"文書の本体"},
+
+  "4":{"answer":"<title>",
+  "discription":"文書のタイトル"},
+
+  "5":{"answer":"<meta>",
+  "discription":"文書に関する情報（メタ情報）"},
+
+  "6":{"answer":"<div>",
+  "discription":"範囲の指定（ブロックレベル）"},
+
+  "7":{"answer":"<span>",
+  "discription":"範囲の指定（インライン）"},
+
+  "8":{"answer":"<p>",
+  "discription":"段落"},
+
+  "9":{"answer":"<br>",
+  "discription":"改行"},
+
+  "10":{"answer":"<em>",
+  "discription":"強調"},
+
+  "11":{"answer":"<strong>",
+  "discription":"より強い強調"},
+
+  "12":{"answer":"<code>",
+  "discription":"ソースコード"},
+
+  "13":{"answer":"<var>",
+  "discription":"変数・引数"},
+
+  "14":{"answer":"<samp>",
+  "discription":"出力サンプル"},
+
+  "15":{"answer":"<font>",
+  "discription":"フォントのサイズ・色・種類"},
+
+  "16":{"answer":"<link>",
+  "discription":"関連文書との関係"},
+
+  "17":{"answer":"<ul>",
+  "discription":"順不同のリスト"},
+
+  "18":{"answer":"<ol>",
+  "discription":"順序付きリスト"},
+
+  "19":{"answer":"<li>",
+  "discription":"リストの項目"},
+
+  "20":{"answer":"<img>",
+  "discription":"画像の埋め込み"},
+
+  "21":{"answer":"<input>",
+  "discription":"フォームの部品"},
+
+  "22":{"answer":"<button>",
+  "discription":"ボタン"},
+
+  "23":{"answer":"<style>",
+  "discription":"スタイルシート"},
+
+  "24":{"answer":"<script>",
+  "discription":"スクリプト"},
+
+}
