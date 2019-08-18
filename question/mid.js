@@ -11,7 +11,7 @@
 	let score;
 	let miss;
 	let score_rate;
-	const timeLimit = 240 * 1000;
+	const timeLimit = 50 * 1000;
 	const timeReady = 4 * 1000;
 	let startTime;
 	let startGameTime;
@@ -65,13 +65,13 @@
 			countLabel.textContent = "START!";
 		}else {
 			if (timeLeft < 4000) {
-				countLabel.innerHTML = "<img class='img_3' src ='../images/img_3.png'>"
+				countLabel.innerHTML = "<img class='img_3' src ='../img_3.png'>"
 			}
 			if (timeLeft < 3000) {
-				countLabel.innerHTML = "<img class='img_2' src ='../images/img_2.png'>"
+				countLabel.innerHTML = "<img class='img_2' src ='../img_2.png'>"
 			}
 			if (timeLeft < 2000) {
-				countLabel.innerHTML = "<img class='img_1' src ='../images/img_1.png'>"
+				countLabel.innerHTML = "<img class='img_1' src ='../img_1.png'>"
 
 			}
 			// countLabel.textContent = Math.round((timeLeft / 1000).toFixed(2));
