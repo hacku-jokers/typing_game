@@ -44,37 +44,37 @@
 "15":{"answer":"window.open",
 "discription":"新規にウィンドウを開く"},
 
-"16":{"answer":"window名.closed",
+"16":{"answer":"windowname.closed",
 "discription":"ウィンドウが閉じているかどうかを判定する"},
 
-"17":{"answer":"window名.name",
+"17":{"answer":"windowname.name",
 "discription":"ウィンドウの名前を取得する"},
 
-"18":{"answer":"window名.moveBy",
+"18":{"answer":"windowname.moveBy",
 "discription":"画面を移動する（相対値にて）"},
 
-"19":{"answer":"window名.moveTo",
+"19":{"answer":"windowname.moveTo",
 "discription":"画面を移動する（絶対値にて）"},
 
-"20":{"answer":"window名.resizeBy",
+"20":{"answer":"windowname.resizeBy",
 "discription":"画面サイズを相対値で指定する"},
 
-"21":{"answer":"window名.resizeTo",
+"21":{"answer":"windowname.resizeTo",
 "discription":"画面サイズを絶対値で指定する"},
 
-"22":{"answer":"window名.scrollBy",
+"22":{"answer":"windowname.scrollBy",
 "discription":"指定位置までページをスクロールする（相対値指定）"},
 
-"23":{"answer":"window名.scrollTo",
+"23":{"answer":"windowname.scrollTo",
 "discription":"指定位置までページをスクロールする（絶対値指定）"},
 
-"24":{"answer":"window名.scroll",
+"24":{"answer":"windowname.scroll",
 "discription":"画面を指定した位置へスクロールする"},
 
-"25":{"answer":"window名.focus()",
+"25":{"answer":"windowname.focus()",
 "discription":"ウィンドウを前面に移動する"},
 
-"26":{"answer":"window名.blur()",
+"26":{"answer":"windowname.blur()",
 "discription":"ウィンドウを後ろに移動する"},
 
 "27":{"answer":"window.pageXOffset()",
