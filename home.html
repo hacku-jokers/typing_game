@@ -126,7 +126,7 @@
 		}
 
 		.top {
-			background-image: url("./rainbow.png");
+			background-image: url("./images/rainbow.png");
 		}
 
 		.video {
@@ -151,19 +151,19 @@
 	<img src="./images/icon.png" alt="" srcset="" id="top_icon">
 	<div id="main">
 		<div class="video">
-			<video src="rainbow.mp4" autoplay muted loop></video>
+			<video src="./images/rainbow.mp4" autoplay muted loop></video>
 		</div>
 		<p id="Welcome">「Tip Type」へようこそ！</p><br>
 		<p id="Welcome2">学びたい項目を選びましょう。</p><br>
-		<btn id="html" onClick="window.open('./html/index.html')">HTML</btn>
+		<btn id="html" onClick="window.location.href=('./html/index.html')">HTML</btn>
 		<btn id="Javascript" >JavaScript</btn>
-		<btn id="css" onClick="window.open('./css/index_css.html')">CSS</btn><br>
+		<btn id="css" onClick="window.location.href=('./css/index_css.html')">CSS</btn><br>
 		<btn id="swift">Swift</btn>
-		<btn id="Python" onClick="window.open('./python/index_py.html')">Python</btn>
+		<btn id="Python" onClick="window.location.href=('./python/index_py.html')">Python</btn>
 		<btn id="SQL">SQL</btn><br>
 		<btn id="html2">使い方</btn>
 		<btn id="html3">復習</btn>
-		<btn id="html4" onClick="window.open('settings.html')">設定</btn>
+		<btn id="html4" onClick="window.location.href('settings.html')">設定</btn>
 	</div>
 	<script>
 		window.onload = function(){
