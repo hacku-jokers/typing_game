@@ -1,55 +1,101 @@
 {
-  "1":{"answer":"if",
-  "discription":""},
+  "1":{"answer":"@inline(__always)",
+  "discription":"常にメソッドをインライン化"},
 
-  "2":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "2":{"answer":"@inline(never)",
+  "discription":"メソッドをインライン化しない"},
 
-  "3":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "3":{"answer":"func",
+  "discription":"関数であることを宣言"},
 
-  "4":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "4":{"answer":"line-height",
+  "discription":"行間を調整"},
 
-  "5":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "5":{"answer":"print",
+  "discription":"出力関数"},
 
-  "6":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "6":{"answer":"/",
+  "discription":"記号を出力"},
 
-  "7":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "7":{"answer":"assert",
+  "discription":"条件を与える"},
 
-  "8":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "8":{"answer":"assertionFailure",
+  "discription":"条件式を渡さない"},
 
-  "9":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "9":{"answer":"StaticString",
+  "discription":"文字列リテラルを保持"},
 
-  "10":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "10":{"answer":"String",
+  "discription":"文字列を定義"},
 
-  "11":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "11":{"answer":"print",
+  "discription":"通過ロジックや変数の内容を確認"},
 
-  "12":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "12":{"answer":"Reflection",
+  "discription":"プログラムに含まれる型や変数、メソッドの情報を参照を操作"},
 
-  "13":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "13":{"answer":"!",
+  "discription":"元の型に変換"},
 
-  "14":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "14":{"answer":"?",
+  "discription":"エラーを起こさずに元の型のプロパティを参照"},
 
-  "15":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "15":{"answer":"Struct",
+  "discription":"継承のできないクラス"},
 
-  "16":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "16":{"answer":"SwiftyJson",
+  "discription":"jsonを使うときのライブラリ"},
 
-  "17":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "17":{"answer":"subscript",
+  "discription":"[ ]で要素にアクセス"},
 
-  "18":{"answer":"<html>",
-  "discription":"文書のルート要素"},
+  "18":{"answer":"true",
+  "discription":"真"},
+
+  "19":{"answer":"false",
+  "discription":"偽"},
+
+  "20":{"answer":"||",
+  "discription":"中置演算子"},
+
+  "21":{"answer":"inout",
+  "discription":"関数の引数をポインタとして受け取り値を直接いじる"},
+
+  "22":{"answer":"#",
+  "discription":"内部引数名と外部引数名を同じにする"},
+
+  "23":{"answer":"var",
+  "discription":"関数の引数の値を関数内で変更"},
+
+  "24":{"answer":"let",
+  "discription":"変更しないことを明示的に示す"},
+
+  "25":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "26":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "27":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "28":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "29":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "30":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "31":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "32":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "33":{"answer":"SequenceType",
+  "discription":"for..inを使ったループ処理を実現"}"
+       }
 }
