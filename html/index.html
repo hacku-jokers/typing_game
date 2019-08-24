@@ -39,7 +39,8 @@
     #Howtouse2 {
       background: #0174DF;
       height: 100px;
-
+      width: 150px;
+      text-align: center;
     }
 
     #play,
@@ -130,13 +131,13 @@
 
 
   <div class="topbox">
-    <btn id="Howtouse" onClick="window.open('./Howtouse.html')">HTMLとは？</btn>
+    <btn id="Howtouse" onClick="window.location.href=('./Howtouse.html')">HTMLとは？</btn>
     <p id="HTML">HTML</p>
-    <btn id="Howtouse2">履歴</btn>
+    <btn id="Howtouse2"　onClick="window.location.href=('./History.html')">履歴</btn>
   </div>
-  <btn id="play" onClick="window.open('./HTML.html')">タイピング初級編を始める</btn>
-  <btn id="play2" onClick="window.open('./html_mid.html')">タイピング中級編を始める</btn>
-  <btn id="play3" onClick="window.open('./HTML.html')">タイピング上級編を始める</btn>
+  <btn id="play" onClick="window.location.href=('./HTML.html')">タイピング初級編を始める</btn>
+  <btn id="play2" onClick="window.location.href=('./html_mid.html')">タイピング中級編を始める</btn>
+  <btn id="play3" onClick="window.location.href=('./HTML.html')">タイピング上級編を始める</btn>
 
 
   <p id="playscore">最高正答率:1</p>
@@ -148,7 +149,7 @@
   <p id="play3score">最高正答率:3</p>
   <p id="play3time">5分間</p><br>
 
-  <btn id="html4" onClick="window.open('../home.html')">戻る</btn>
+  <btn id="html4" onClick="window.location.href=('../home.html')">戻る</btn>
 
 
   <script>
