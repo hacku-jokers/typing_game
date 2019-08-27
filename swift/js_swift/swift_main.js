@@ -152,8 +152,16 @@
     total_question = 1;
     // scoreLabel.textContent = score;
     // missLabel.textContent = miss;
-    word = words[Math.floor(Math.random() * words.length)];
+    $.get("https://yuma1100.github.io/hack_u_question/question/swift_Beginner.json", function(data){
+			len = Object.keys(data).length;
+			// console.log(len);
+			var rand = Math.floor(Math.random() * len);
+			word = data[rand].answer;
+			desc = data[rand].discription;
+			question_data = data;
+			console.log(question_data);
 
+		});
     startTime = Date.now();
     startTimer();
 

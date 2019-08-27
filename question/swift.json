@@ -14,48 +14,62 @@
   "5":{"answer":"print",
   "discription":"出力関数"},
 
-
-  "7":{"answer":"assert",
+  "6":{"answer":"assert",
   "discription":"条件を与える"},
 
-  "8":{"answer":"assertionFailure",
+  "7":{"answer":"assertionFailure",
   "discription":"条件式を渡さない"},
 
-  "9":{"answer":"StaticString",
+  "8":{"answer":"StaticString",
   "discription":"文字列リテラルを保持"},
 
-  "10":{"answer":"String",
+  "9":{"answer":"String",
   "discription":"文字列を定義"},
 
-  "11":{"answer":"print",
+  "10":{"answer":"print",
   "discription":"通過ロジックや変数の内容を確認"},
 
-  "12":{"answer":"Reflection",
+  "11":{"answer":"Reflection",
   "discription":"プログラムに含まれる型や変数、メソッドの情報を参照を操作"},
 
-  "15":{"answer":"Struct",
+  "12":{"answer":"Struct",
   "discription":"継承のできないクラス"},
 
-  "16":{"answer":"SwiftyJson",
+  "13":{"answer":"SwiftyJson",
   "discription":"jsonを使うときのライブラリ"},
 
-  "17":{"answer":"subscript",
+  "14":{"answer":"subscript",
   "discription":"[ ]で要素にアクセス"},
 
-  "18":{"answer":"true",
+  "15":{"answer":"true",
   "discription":"真"},
 
-  "19":{"answer":"false",
+  "16":{"answer":"false",
   "discription":"偽"},
 
-  "21":{"answer":"inout",
+  "17":{"answer":"inout",
   "discription":"関数の引数をポインタとして受け取り値を直接いじる"},
 
-  "23":{"answer":"var",
+  "18":{"answer":"var",
   "discription":"関数の引数の値を関数内で変更"},
 
-  "24":{"answer":"let",
+  "19":{"answer":"let",
   "discription":"変更しないことを明示的に示す"},
+
+  "20":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "21":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "22":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "23":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
+
+  "24":{"answer":"self.〜",
+  "discription":"自分のクラス内の何かにアクセス"},
 
   "25":{"answer":"self.〜",
   "discription":"自分のクラス内の何かにアクセス"},
@@ -66,22 +80,7 @@
   "27":{"answer":"self.〜",
   "discription":"自分のクラス内の何かにアクセス"},
 
-  "28":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
-
-  "29":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
-
-  "30":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
-
-  "31":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
-
-  "32":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
-
-  "33":{"answer":"SequenceType",
+  "28":{"answer":"SequenceType",
   "discription":"for..inを使ったループ処理を実現"}"
        }
 }
