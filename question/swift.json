@@ -14,8 +14,6 @@
   "5":{"answer":"print",
   "discription":"出力関数"},
 
-  "6":{"answer":"/",
-  "discription":"記号を出力"},
 
   "7":{"answer":"assert",
   "discription":"条件を与える"},
@@ -35,12 +33,6 @@
   "12":{"answer":"Reflection",
   "discription":"プログラムに含まれる型や変数、メソッドの情報を参照を操作"},
 
-  "13":{"answer":"!",
-  "discription":"元の型に変換"},
-
-  "14":{"answer":"?",
-  "discription":"エラーを起こさずに元の型のプロパティを参照"},
-
   "15":{"answer":"Struct",
   "discription":"継承のできないクラス"},
 
@@ -56,14 +48,8 @@
   "19":{"answer":"false",
   "discription":"偽"},
 
-  "20":{"answer":"||",
-  "discription":"中置演算子"},
-
   "21":{"answer":"inout",
   "discription":"関数の引数をポインタとして受け取り値を直接いじる"},
-
-  "22":{"answer":"#",
-  "discription":"内部引数名と外部引数名を同じにする"},
 
   "23":{"answer":"var",
   "discription":"関数の引数の値を関数内で変更"},

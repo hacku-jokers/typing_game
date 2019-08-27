@@ -1,0 +1,131 @@
+{
+  "1":{"answer":"<<",
+  "discription":"左ビットシフト"},
+
+  "2":{"answer":">>",
+  "discription":"右ビットシフト"},
+
+  "3":{"answer":"*",
+  "discription":"乗算"},
+
+  "4":{"answer":"/",
+  "discription":"除算"},
+
+  "5":{"answer":"%",
+  "discription":"剰余"},
+
+  "6":{"answer":"&*",
+  "discription":"オーバーフロー乗算"},
+
+  "7":{"answer":"&",
+  "discription":"ビットAND"},
+
+  "8":{"answer":"+",
+  "discription":"加算"},
+
+  "9":{"answer":"-",
+  "discription":"減算"},
+
+  "10":{"answer":"&+",
+  "discription":"オーバーフロー加算"},
+
+  "11":{"answer":"&-",
+  "discription":"オーバーフロー減算"},
+
+  "12":{"answer":"|",
+  "discription":"ビットOR"},
+
+  "13":{"answer":"^",
+  "discription":"ビットXOR"},
+
+  "14":{"answer":"..<",
+  "discription":"半開区間"},
+
+  "15":{"answer":"...",
+  "discription":"閉区間"},
+
+  "16":{"answer":"is",
+  "discription":"型チェック"},
+
+  "17":{"answer":"as as? as!",
+  "discription":"型キャスト"},
+
+  "18":{"answer":"??",
+  "discription":"Nil Coalescing"},
+
+  "19":{"answer":"<",
+  "discription":"未満"},
+
+  "20":{"answer":"<=",
+  "discription":"以下"},
+
+  "21":{"answer":">",
+  "discription":"より上"},
+
+  "22":{"answer":">=",
+  "discription":"以上"},
+
+  "23":{"answer":"==",
+  "discription":"イコール"},
+
+  "24":{"answer":"!=",
+  "discription":"ノットイコール"},
+
+  "25":{"answer":"===",
+  "discription":"同じオブジェクト"},
+
+  "26":{"answer":"!==",
+  "discription":"違うオブジェクト"},
+
+  "27":{"answer":"~=",
+  "discription":"パターンマッチ"},
+
+  "28":{"answer":"&&",
+  "discription":"論理AND"},
+
+  "29":{"answer":"||",
+  "discription":"論理OR"},
+
+  "30":{"answer":"?:",
+  "discription":"三項条件"},
+
+  "31":{"answer":"=",
+  "discription":"代入"},
+
+  "32":{"answer":"*=",
+  "discription":"乗算と代入"},
+
+  "33":{"answer":"/=",
+  "discription":"徐算と代入"},
+
+  "34":{"answer":"%=",
+  "discription":"剰余と代入"},
+
+  "35":{"answer":"+=",
+  "discription":"加算と代入"},
+
+  "36":{"answer":"-=",
+  "discription":"減算と代入"},
+
+  "37":{"answer":"<<=",
+  "discription":"左ビットシフトと代入"},
+
+  "38":{"answer":">>=",
+  "discription":"右ビットシフトと代入"},
+
+  "40":{"answer":"&=",
+  "discription":"ビットANDと代入"},
+
+  "41":{"answer":"|=",
+  "discription":"ビットORと代入"},
+
+  "42":{"answer":"^=",
+  "discription":"ビットNOTと代入"},
+
+  "43":{"answer":"&&=",
+  "discription":"論理ANDと代入"},
+
+  "44":{"answer":"||=",
+  "discription":"論理ORと代入"}"
+         }
+}
