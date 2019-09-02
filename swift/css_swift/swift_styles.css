@@ -6,7 +6,7 @@ body {
 }
 
 #target {
-  font-size: 50px;
+  font-size: 80px;
   letter-spacing: 10px;
   padding-top: 10px;
   border-radius: 10px;
@@ -24,9 +24,14 @@ body {
 .info3 {
   color: #008000;
   font-size: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #btn,#btn1,#btn2 {
+  display: none;
   background: #FFA500;
   font-size: 50px;
   letter-spacing: 10px;
@@ -47,19 +52,21 @@ body {
 
 }
 
-#result8 {
+.openModal {
   font-size: 40px;
   background-color: #FF4500;
   padding:10px;
   border-radius: 10px;
   font-size: 50px;
   letter-spacing: 10px;
+  outline: none;
 }
 
 #result {
   padding: 0;
   font-size: 70px;
-  margin-top: -50px;
+  margin-top: 0;
+  text-align: center;
 }
 
 #result1,#result2,#result3{
@@ -80,6 +87,7 @@ body {
   top:20px;
   left: 10px;
   background-color: #CC3399;
+  width: 200px;
 }
 #result5{
   font-size: 40px;
@@ -87,27 +95,143 @@ body {
   position: fixed;
   bottom: 10px;
   left:10px;
+  width: 100px;
 }
 #result7{
-  font-size: 40px;
-  background-color: #0000CD;
-  position: fixed;
-  bottom: 10px;
-  left:140px;
-}
-#result6{
   font-size: 40px;
   background-color: #87CEFA;
   position: fixed;
   bottom: 10px;
+  left:140px;
+  width: 400px;
+}
+#result6{
+  font-size: 40px;
+  background-color: #0000CD;
+  position: fixed;
+  bottom: 10px;
   right:10px;
+  width: 100px;
 }
-#result-wrapper{
+#result-wrapper {
   display: none;
 }
-.done #result-wrapper{
+
+#countdown_timer {
+  font-size: 300px;
+}
+
+#elapsed_time {
+  font-size: 50px;
+}
+#progress {
+  display: none;
+
+
+}
+progress::-webkit-progress-value {
+}
+.done #result-wrapper {
   display: block;
+  position: relative;
+
 }
-.done .game{
+.game {
+  position: relative;
+}
+.openModal {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+}
+.done .game {
   display: none;
+  position: absolute;
+}
+
+.img_1,.img_2,.img_3 {
+  text-align: center;
+}
+/* モーダルCSS */
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30,30,30,0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.openModal {
+  display: none;
+}
+.description {
+  font-size: 80px;
+}
+
+
+/* 以下ボタンスタイル */
+
+.e_time {
+  display: none;
+}
+
+/* #openModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+} */
+
+/* ジャッジcss */
+.judgeArea {
+  z-index: 10; /*サイトによってここの数値は調整 */
+  /* top: 0; */
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.AreaHide {
+  display: none;
+}
+
+.judge img{
+  width: 250px;
+}
+.miss_point {
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.judgeArea {
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  text-align: left;
 }
