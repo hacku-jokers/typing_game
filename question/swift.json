@@ -1,15 +1,15 @@
 {
-  "1":{"answer":"@inline(__always)",
-  "discription":"常にメソッドをインライン化"},
+  "1":{"answer":"none",
+  "discription":"演算子を定義した際に、結合方向を指定しない"},
 
-  "2":{"answer":"@inline(never)",
-  "discription":"メソッドをインライン化しない"},
+  "2":{"answer":"nonmutating",
+  "discription":"インスタンスメソッドが自身に変更を加えないことを宣言"},
 
   "3":{"answer":"func",
   "discription":"関数であることを宣言"},
 
-  "4":{"answer":"line-height",
-  "discription":"行間を調整"},
+  "4":{"answer":"optional",
+  "discription":"指定されたメソッドやプロパティの実装を任意とする"},
 
   "5":{"answer":"print",
   "discription":"出力関数"},
@@ -95,14 +95,14 @@
   "32":{"answer":"Int",
   "discription":"整数値を初期値として代入"},
 
-  "33":{"answer":"private",
-  "discription":"アクセス修飾子"},
+  "33":{"answer":"right",
+  "discription":"演算子を定義した際に、右結合を指定"},
 
   "34":{"answer":"protocol",
   "discription":"プロトコルを宣言"},
 
-  "35":{"answer":"public",
-  "discription":"アクセス修飾子"},
+  "35":{"answer":"required",
+  "discription":"サブクラスにイニシャライザのオーバーライドを強制"},
 
   "36":{"answer":"static",
   "discription":"static変数やstatic functionを宣言"},
@@ -224,49 +224,70 @@
   "76":{"answer":"#line",
   "discription":"#line が評価された場所の行番号 (Int)"},
 
-  "77":{"answer":"",
+  "77":{"answer":"#selector",
+  "discription":"Selectorを生成"},
+
+  "78":{"answer":"#sourceLocation",
+  "discription":"#line,#fileの値を操作"},
+
+  "79":{"answer":"#dsohandle",
+  "discription":"書かれている場所に関する情報を表すキーワード"},
+
+  "80":{"answer":"assignment",
+  "discription":"値を取る演算子を宣言した際に演算するか指定"},
+
+  "81":{"answer":"convenience",
+  "discription":"convenience initializerを宣言"},
+
+  "82":{"answer":"dynamic",
+  "discription":"Objective-C のランタイムを使用して値にアクセス"},
+
+  "83":{"answer":"didSet",
+  "discription":"Storedプロパティ、変数の値が変更された際の処理を宣言"},
+
+  "84":{"answer":"final",
+  "discription":"継承、オーバーライドを不可にする"},
+
+  "85":{"answer":"Type",
   "discription":""},
 
-  "78":{"answer":"",
-  "discription":""},
+  "86":{"answer":"indirect",
+  "discription":"列挙体を列挙子の中で再帰的に使えるようにする"},
 
-  "79":{"answer":"",
-  "discription":""},
+  "87":{"answer":"lazy",
+  "discription":"遅延評価する"},
 
-  "80":{"answer":"",
-  "discription":""},
+  "88":{"answer":"left",
+  "discription":"演算子を定義した際に、左結合を指定"},
 
-  "81":{"answer":"",
-  "discription":""},
+  "89":{"answer":"mutating",
+  "discription":"自身、自身のプロパティを換えるインスタンスメソッドに宣言"},
 
-  "82":{"answer":"",
-  "discription":""},
+  "90":{"answer":"override",
+  "discription":"親クラスのメソッドやプロパティをオーバーライドする際に宣言"},
 
-  "83":{"answer":"",
-  "discription":""},
+  "91":{"answer":"Type",
+  "discription":"クラス、構造体、列挙体のメタタイプを取得"},
 
-  "84":{"answer":"",
-  "discription":""},
+  "92":{"answer":"unowned",
+  "discription":"弱参照の変数を宣言"},
 
-  "85":{"answer":"",
-  "discription":""},
+  "93":{"answer":"unowned(safe)",
+  "discription":"unownedへ修飾することで参照の動作を指定"},
 
-  "86":{"answer":"",
-  "discription":""},
+  "94":{"answer":"unowned(unsafe)",
+  "discription":"unowned へ修飾することで参照の動作を指定"},
 
-  "87":{"answer":"",
-  "discription":""},
+  "95":{"answer":"weak",
+  "discription":"弱参照の変数を宣言"},
 
-  "88":{"answer":"",
-  "discription":""},
+  "96":{"answer":"willSet",
+  "discription":"stored property、変数への代入が実行される前の処理を記述"},
 
-  "89":{"answer":"",
-  "discription":""},
+  "97":{"answer":"public",
+  "discription":"アクセス修飾子の一種"},
 
-  "90":{"answer":"",
-  "discription":""},
-
-  "91":{"answer":"SequenceType",
+  "98":{"answer":"SequenceType",
   "discription":"for..inを使ったループ処理を実現"}"
        }
 }
