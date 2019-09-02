@@ -1,15 +1,15 @@
 {
-  "1":{"answer":"@inline(__always)",
-  "discription":"常にメソッドをインライン化"},
+  "1":{"answer":"none",
+  "discription":"演算子を定義した際に、結合方向を指定しない"},
 
-  "2":{"answer":"@inline(never)",
-  "discription":"メソッドをインライン化しない"},
+  "2":{"answer":"nonmutating",
+  "discription":"インスタンスメソッドが自身に変更を加えないことを宣言"},
 
   "3":{"answer":"func",
   "discription":"関数であることを宣言"},
 
-  "4":{"answer":"line-height",
-  "discription":"行間を調整"},
+  "4":{"answer":"optional",
+  "discription":"指定されたメソッドやプロパティの実装を任意とする"},
 
   "5":{"answer":"print",
   "discription":"出力関数"},
@@ -56,31 +56,238 @@
   "19":{"answer":"let",
   "discription":"変更しないことを明示的に示す"},
 
-  "20":{"answer":"self.〜",
+  "20":{"answer":"self",
   "discription":"自分のクラス内の何かにアクセス"},
 
-  "21":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
+  "21":{"answer":"MyApplication",
+  "discription":"自動的に遅延初期化される"},
 
-  "22":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
+  "22":{"answer":"dispatch_once_t",
+  "discription":"トークンで1回限りの初期化を保証"},
 
-  "23":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
+  "23":{"answer":"prefix",
+  "discription":"前に置く"},
 
-  "24":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
+  "24":{"answer":"suffix",
+  "discription":"末尾１文字の部分文字列を取得"},
 
-  "25":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
+  "25":{"answer":"String.Index",
+  "discription":"任意の１文字を取得"},
 
-  "26":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
+  "26":{"answer":"infix",
+  "discription":"間に置く"},
 
-  "27":{"answer":"self.〜",
-  "discription":"自分のクラス内の何かにアクセス"},
+  "27":{"answer":"postfix",
+  "discription":"後に置く"},
 
-  "28":{"answer":"SequenceType",
+  "28":{"answer":"operator",
+  "discription":"グローバルに使用"},
+
+  "29":{"answer":"Process",
+  "discription":"コマンドラインツールを実行"},
+
+  "30":{"answer":"precedence",
+  "discription":"演算子の優先順位"},
+
+  "31":{"answer":"associativity",
+  "discription":"〇〇の演算子を優先"},
+
+  "32":{"answer":"Int",
+  "discription":"整数値を初期値として代入"},
+
+  "33":{"answer":"right",
+  "discription":"演算子を定義した際に、右結合を指定"},
+
+  "34":{"answer":"protocol",
+  "discription":"プロトコルを宣言"},
+
+  "35":{"answer":"required",
+  "discription":"サブクラスにイニシャライザのオーバーライドを強制"},
+
+  "36":{"answer":"static",
+  "discription":"static変数やstatic functionを宣言"},
+
+  "37":{"answer":"typealias",
+  "discription":"型の別名を宣言"},
+
+  "38":{"answer":"associatedtype",
+  "discription":"associated type (付属型) の宣言"},
+
+  "39":{"answer":"break",
+  "discription":"switch 文やループから抜ける"},
+
+  "40":{"answer":"case",
+  "discription":"列挙子リストの宣言"},
+
+  "41":{"answer":"continue",
+  "discription":"次のループ処理へ移動"},
+
+  "42":{"answer":"default",
+  "discription":"caseに当てはまらない場合の処理の宣言"},
+
+  "43":{"answer":"defer",
+  "discription":"スコープを抜ける際に実行する処理を記述"},
+
+  "44":{"answer":"do",
+  "discription":"スコープを作成"},
+
+  "45":{"answer":"else",
+  "discription":"条件分岐で使用"},
+
+  "46":{"answer":"fallthrough",
+  "discription":"caseからその下のcaseに処理を継続"},
+
+  "47":{"answer":"for",
+  "discription":"繰り返し処理を記述"},
+
+  "48":{"answer":"guard",
+  "discription":"条件を満たさない場合に処理を抜ける"},
+
+  "49":{"answer":"if",
+  "discription":"条件を評価し一致した場合ブロック内を実行"},
+
+  "51":{"answer":"in",
+  "discription":"for ~ in の形で取り出す要素の配列を指定"},
+
+  "52":{"answer":"return",
+  "discription":"返り値を指定"},
+
+  "53":{"answer":"switch",
+  "discription":"条件分岐を行う"},
+
+  "54":{"answer":"where",
+  "discription":"マッチングの条件を追加"},
+
+  "55":{"answer":"while",
+  "discription":"繰り返し構文を記述"},
+
+  "56":{"answer":"as",
+  "discription":"キャスト,型を明示"},
+
+  "57":{"answer":"Any",
+  "discription":"すべての型のインスタンス(関数型も含む)を表現"},
+
+  "58":{"answer":"catch",
+  "discription":"例外が投げられた際にブロック内が実行"},
+
+  "59":{"answer":"is",
+  "discription":"型,プロコトルを実装した型として振る舞えるかどうかを検査"},
+
+  "60":{"answer":"nil",
+  "discription":"nilリテラルを表す"},
+
+  "61":{"answer":"rethrows",
+  "discription":"引数にとったクロージャが投げた例外を呼び出し更に投げる"},
+
+  "62":{"answer":"super",
+  "discription":"親クラスを表す"},
+
+  "63":{"answer":"throw",
+  "discription":"例外を投げる"},
+
+  "64":{"answer":"throws",
+  "discription":"例外が投げられる可能性があることを示す"},
+
+  "65":{"answer":"try",
+  "discription":"例外が投げられる可能性のある関数・メソッドを実行"},
+
+  "66":{"answer":"#available",
+  "discription":"OS 及びそのバージョンによる条件を表現"},
+
+  "67":{"answer":"#colorLiteral",
+  "discription":"色を表現するリテラルを記述"},
+
+  "68":{"answer":"#column",
+  "discription":"#column が評価された場所の列番号 (Int)"},
+
+  "69":{"answer":"#if, #else, #elseif, #endif",
+  "discription":"コンパイル時に指定のコードを含めるか否かを制御"},
+
+  "70":{"answer":"#file",
+  "discription":"#file が評価された場所のファイル名 (String)"},
+
+  "71":{"answer":"#fileLiteral",
+  "discription":"ファイルリテラルを記述"},
+
+  "72":{"answer":"self",
+  "discription":"同じクラス内の何か(定数など)にアクセスする"},
+
+  "73":{"answer":"#function",
+  "discription":"#functionが評価された場所の関数・メソッドの名前を表現"},
+
+  "74":{"answer":"#imageLiteral",
+  "discription":"画像リソースを表現するリテラルを記述"},
+
+  "75":{"answer":"#keypath",
+  "discription":"keyやkeypath(string literal)を生成"},
+
+  "76":{"answer":"#line",
+  "discription":"#line が評価された場所の行番号 (Int)"},
+
+  "77":{"answer":"#selector",
+  "discription":"Selectorを生成"},
+
+  "78":{"answer":"#sourceLocation",
+  "discription":"#line,#fileの値を操作"},
+
+  "79":{"answer":"#dsohandle",
+  "discription":"書かれている場所に関する情報を表すキーワード"},
+
+  "80":{"answer":"assignment",
+  "discription":"値を取る演算子を宣言した際に演算するか指定"},
+
+  "81":{"answer":"convenience",
+  "discription":"convenience initializerを宣言"},
+
+  "82":{"answer":"dynamic",
+  "discription":"Objective-C のランタイムを使用して値にアクセス"},
+
+  "83":{"answer":"didSet",
+  "discription":"Storedプロパティ、変数の値が変更された際の処理を宣言"},
+
+  "84":{"answer":"final",
+  "discription":"継承、オーバーライドを不可にする"},
+
+  "85":{"answer":"Type",
+  "discription":""},
+
+  "86":{"answer":"indirect",
+  "discription":"列挙体を列挙子の中で再帰的に使えるようにする"},
+
+  "87":{"answer":"lazy",
+  "discription":"遅延評価する"},
+
+  "88":{"answer":"left",
+  "discription":"演算子を定義した際に、左結合を指定"},
+
+  "89":{"answer":"mutating",
+  "discription":"自身、自身のプロパティを換えるインスタンスメソッドに宣言"},
+
+  "90":{"answer":"override",
+  "discription":"親クラスのメソッドやプロパティをオーバーライドする際に宣言"},
+
+  "91":{"answer":"Type",
+  "discription":"クラス、構造体、列挙体のメタタイプを取得"},
+
+  "92":{"answer":"unowned",
+  "discription":"弱参照の変数を宣言"},
+
+  "93":{"answer":"unowned(safe)",
+  "discription":"unownedへ修飾することで参照の動作を指定"},
+
+  "94":{"answer":"unowned(unsafe)",
+  "discription":"unowned へ修飾することで参照の動作を指定"},
+
+  "95":{"answer":"weak",
+  "discription":"弱参照の変数を宣言"},
+
+  "96":{"answer":"willSet",
+  "discription":"stored property、変数への代入が実行される前の処理を記述"},
+
+  "97":{"answer":"public",
+  "discription":"アクセス修飾子の一種"},
+
+  "98":{"answer":"SequenceType",
   "discription":"for..inを使ったループ処理を実現"}"
        }
 }
