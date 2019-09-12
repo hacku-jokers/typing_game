@@ -140,7 +140,7 @@
   <btn id="play3" onClick="window.location.href=('./HTML.html')">タイピング上級編を始める</btn>
 
 
-  <p id="playscore">最高正答率:1</p>
+  <p id="playscore">最高正答率:<span id="Beginner_score">0</span></p>
   <p id="playtime">2分間</p><br>
 
   <p id="play2score">最高正答率:<span id="mid_score">0</span></p>
@@ -165,6 +165,21 @@
       console.log(max_score);
       const mid_score = document.getElementById("mid_score");
       mid_score.textContent = max_score + "%";
+    });
+
+
+    var firebaseRef = firebase.database().ref(`/html_Beginner_score`);
+    let max_score;
+    firebaseRef.on("value", function (snapshot) {
+      const database_score = snapshot.val();
+      for (const key in database_score) {
+        if (database_score.hasOwnProperty(key)) {
+          max_score = database_score[key];
+        }
+      }
+      console.log(max_score);
+      const Beginner_score = document.getElementById("Beginner_score");
+      Beginner_score.textContent = max_score + "%";
     });
   </script>
 </body>
