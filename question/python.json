@@ -1,213 +1,282 @@
-
 {
-    "1":{"question":"all()",
-    "discription":"すべての要素がTrueであればTrueを返す"},
-
-    "2":{"question":"any()",
-    "discription":"いずれかの要素がTrueであればTrueを返す"},
-
-    "3":{"question":"enumerate()",
-    "discription":"リストやイテレータを受けとり、イテレータを返す"},
-
-    "4":{"question":"zip()",
-    "discription":"複数のリスト、イテレータに対し同じインデックスをまとめて返す"},
-
-    "5":{"question":"divmod()",
-    "discription":"割り算の結果と余りをまとめて求める"},
-
-    "6":{"question":"eval()",
-    "discription":"文字列とオプションの引数 globals、locals をとる"},
-
-    "7":{"question":"set()",
-    "discription":"集合を表現する型、setを作る"},
-
-    "8":{"question":"bool()",
-    "discription":"TrueかFalseに変換する"},
-
-    "9":{"question":"bytearray()",
-    "discription":"バイト配列を返す"},
-
-    "10":{"question":"bytes()",
-    "discription":"バイトオブジェクトを返す"},
-
-    "11":{"question":"dict()",
-    "discription":"辞書型"},
-
-    "12":{"question":"int()",
-    "discription":"int型"},
-
-    "13":{"question":"float()",
-    "discription":"浮動小数"},
-
-    "14":{"question":"frozenset()",
-    "discription":"変更不可能なset"},
-
-    "15":{"question":"iter()",
-    "discription":"イテレータを返す"},
-
-    "16":{"question":"list()",
-    "discription":"リストを返す"},
-
-    "17":{"question":"str()",
-    "discription":"文字列型を返す"},
-
-    "18":{"question":"tuple()",
-    "discription":"タプル型"},
-
-    "19":{"question":"type()",
-    "discription":"型を返す"},
-
-    "20":{"question":"abs()",
-    "discription":"絶対値"},
-
-    "21":{"question":"complex()",
-    "discription":"複素数に変換する"},
-
-    "22":{"question":"pow()",
-    "discription":"べき乗（**演算子と同等）"},
-
-    "23":{"question":"max()",
-    "discription":"最大値を取得"},
-
-    "24":{"question":"min()",
-    "discription":"最小値を取得"},
-
-    "25":{"question":"bin()",
-    "discription":"2進数"},
-
-    "26":{"question":"oct()",
-    "discription":"8進数"},
-
-    "27":{"question":"hex()",
-    "discription":"16進数"},
-
-    "28":{"question":"round()",
-    "discription":"四捨五入"},
-
-    "29":{"question":"sum()",
-    "discription":"リストの合計値を返す"},
-
-    "30":{"question":"filter()",
-    "discription":"指定した条件を満たす要素からなる新しい配列を返す"},
-
-    "31":{"question":"map()",
-    "discription":"指定した配列のすべての値に対しクロージャで指定した処理を実行"},
-
-    "32":{"question":"len()",
-    "discription":"リスト内の要素の数を取得"},
-
-    "33":{"question":"next()",
-    "discription":"イテレータの次を取得"},
-
-    "34":{"question":"range()",
-    "discription":"rangeシーケンスを作る"},
-
-    "35":{"question":"reversed()",
-    "discription":"リストなどを反転させる"},
-
-    "36":{"question":"slice()",
-    "discription":"スライス処理（配列の一部取得など）"},
-
-    "37":{"question":"sorted()",
-    "discription":"リストをソートして返す"},
-
-    "38":{"question":"zip()",
-    "discription":"リストやイテレータから要素を集めたタプルのイテレータを作る"},
-
-    "39":{"question":"ascii()",
-    "discription":"印字可能な表現を含む文字列を返す"},
-
-    "40":{"question":"chr()",
-    "discription":"Unicodeのコードポイントを整数値で指定し、その文字を返す"},
-
-    "41":{"question":"ord()",
-    "discription":"Unicodeのコードポイントの整数値を取得する"},
-
-    "42":{"question":"format()",
-    "discription":"文字列のフォーマット"},
-
-    "43":{"question":"callable()",
-    "discription":"オブジェクトが呼び出し可能かチェックする"},
-
-    "44":{"question":"classmethod()",
-    "discription":"クラスメソッドの取得"},
-
-    "45":{"question":"staticmethod()",
-    "discription":"静的メソッドを取得"},
-
-    "46":{"question":"setattr()",
-    "discription":"オブジェクトに属性を設定する"},
-
-    "47":{"question":"getattr()",
-    "discription":"オブジェクトから属性を取得"},
-
-    "48":{"question":"delattr()",
-    "discription":"オブジェクトから属性を削除"},
-
-    "49":{"question":"hasattr()",
-    "discription":"オブジェクトの属性名に存在していればTrueを返す"},
-
-    "50":{"question":"dir()",
-    "discription":"オブジェクトの有効な属性のリストを取得"},
-
-    "51":{"question":"globals()",
-    "discription":"グローバル変数などグローバルシンボルを取得"},
-
-    "52":{"question":"locals()",
-    "discription":"ローカル変数などローカルシンボルを取得"},
-
-    "53":{"question":"hash()",
-    "discription":"オブジェクトのハッシュ値を取得"},
-
-    "54":{"question":"id()",
-    "discription":"オブジェクトの識別値を取得"},
-
-    "55":{"question":"isinstance()",
-    "discription":"第一引数のオブジェクトが第二引数のインスタンスであるかチェックする"},
-
-    "56":{"question":"issubclass()",
-    "discription":"第一引数のクラスが第二引数のサブクラスかチェックする"},
-
-    "57":{"question":"object()",
-    "discription":"何もないオブジェクトを返す"},
-
-    "58":{"question":"property()",
-    "discription":"property属性を返す"},
-
-    "59":{"question":"repr()",
-    "discription":"オブジェクトを文字列として返す"},
-
-    "60":{"question":"super()",
-    "discription":"親クラスへのプロキシオブジェクトを返す"},
-
-    "61":{"question":"vars()",
-    "discription":"__dict__属性を持つ場合はそれを返す"},
-
-    "62":{"question":"compile()",
-    "discription":"そのままですがコンパイルを行う（exec,evalなどで実行可能）"},
-
-    "63":{"question":"eval()",
-    "discription":"文字列を評価、実行"},
-
-    "64":{"question":"exec()",
-    "discription":"コードの実行(コンパイル済みのオブジェクトやソースもそれぞれ実行可能）"},
-
-    "65":{"question":"help()",
-    "discription":"ヘルプを起動する（対話モジュール上で使う）"},
-
-    "66":{"question":"input()",
-    "discription":"標準入力より取得"},
-
-    "67":{"question":"print()",
-    "discription":"標準出力へ出力"},
-
-    "68":{"question":"open()",
-    "discription":"ファイルを開く"},
-
-    "69":{"question":"memoryview()",
-    "discription":"オブジェクトのメモリビューを取得して、メモリの状態などを見る"},
-
-    "70":{"question":"__import__()",
-    "discription":"import文と同等のことが可能"}
-       }
+    "1": {
+        "question": "all()",
+        "discription": "すべての要素がTrueであればTrueを返す"
+    },
+    "2": {
+        "question": "any()",
+        "discription": "いずれかの要素がTrueであればTrueを返す"
+    },
+    "3": {
+        "question": "enumerate()",
+        "discription": "リストやイテレータを受けとり、イテレータを返す"
+    },
+    "4": {
+        "question": "zip()",
+        "discription": "複数のリスト、イテレータに対し同じインデックスをまとめて返す"
+    },
+    "5": {
+        "question": "divmod()",
+        "discription": "割り算の結果と余りをまとめて求める"
+    },
+    "6": {
+        "question": "eval()",
+        "discription": "文字列とオプションの引数 globals、locals をとる"
+    },
+    "7": {
+        "question": "set()",
+        "discription": "集合を表現する型、setを作る"
+    },
+    "8": {
+        "question": "bool()",
+        "discription": "TrueかFalseに変換する"
+    },
+    "9": {
+        "question": "bytearray()",
+        "discription": "バイト配列を返す"
+    },
+    "10": {
+        "question": "bytes()",
+        "discription": "バイトオブジェクトを返す"
+    },
+    "11": {
+        "question": "dict()",
+        "discription": "辞書型"
+    },
+    "12": {
+        "question": "int()",
+        "discription": "int型"
+    },
+    "13": {
+        "question": "float()",
+        "discription": "浮動小数"
+    },
+    "14": {
+        "question": "frozenset()",
+        "discription": "変更不可能なset"
+    },
+    "15": {
+        "question": "iter()",
+        "discription": "イテレータを返す"
+    },
+    "16": {
+        "question": "list()",
+        "discription": "リストを返す"
+    },
+    "17": {
+        "question": "str()",
+        "discription": "文字列型を返す"
+    },
+    "18": {
+        "question": "tuple()",
+        "discription": "タプル型"
+    },
+    "19": {
+        "question": "type()",
+        "discription": "型を返す"
+    },
+    "20": {
+        "question": "abs()",
+        "discription": "絶対値"
+    },
+    "21": {
+        "question": "complex()",
+        "discription": "複素数に変換する"
+    },
+    "22": {
+        "question": "pow()",
+        "discription": "べき乗（**演算子と同等）"
+    },
+    "23": {
+        "question": "max()",
+        "discription": "最大値を取得"
+    },
+    "24": {
+        "question": "min()",
+        "discription": "最小値を取得"
+    },
+    "25": {
+        "question": "bin()",
+        "discription": "2進数"
+    },
+    "26": {
+        "question": "oct()",
+        "discription": "8進数"
+    },
+    "27": {
+        "question": "hex()",
+        "discription": "16進数"
+    },
+    "28": {
+        "question": "round()",
+        "discription": "四捨五入"
+    },
+    "29": {
+        "question": "sum()",
+        "discription": "リストの合計値を返す"
+    },
+    "30": {
+        "question": "filter()",
+        "discription": "指定した条件を満たす要素からなる新しい配列を返す"
+    },
+    "31": {
+        "question": "map()",
+        "discription": "指定した配列のすべての値に対しクロージャで指定した処理を実行"
+    },
+    "32": {
+        "question": "len()",
+        "discription": "リスト内の要素の数を取得"
+    },
+    "33": {
+        "question": "next()",
+        "discription": "イテレータの次を取得"
+    },
+    "34": {
+        "question": "range()",
+        "discription": "rangeシーケンスを作る"
+    },
+    "35": {
+        "question": "reversed()",
+        "discription": "リストなどを反転させる"
+    },
+    "36": {
+        "question": "slice()",
+        "discription": "スライス処理（配列の一部取得など）"
+    },
+    "37": {
+        "question": "sorted()",
+        "discription": "リストをソートして返す"
+    },
+    "38": {
+        "question": "zip()",
+        "discription": "リストやイテレータから要素を集めたタプルのイテレータを作る"
+    },
+    "39": {
+        "question": "ascii()",
+        "discription": "印字可能な表現を含む文字列を返す"
+    },
+    "40": {
+        "question": "chr()",
+        "discription": "Unicodeのコードポイントを整数値で指定し、その文字を返す"
+    },
+    "41": {
+        "question": "ord()",
+        "discription": "Unicodeのコードポイントの整数値を取得する"
+    },
+    "42": {
+        "question": "format()",
+        "discription": "文字列のフォーマット"
+    },
+    "43": {
+        "question": "callable()",
+        "discription": "オブジェクトが呼び出し可能かチェックする"
+    },
+    "44": {
+        "question": "classmethod()",
+        "discription": "クラスメソッドの取得"
+    },
+    "45": {
+        "question": "staticmethod()",
+        "discription": "静的メソッドを取得"
+    },
+    "46": {
+        "question": "setattr()",
+        "discription": "オブジェクトに属性を設定する"
+    },
+    "47": {
+        "question": "getattr()",
+        "discription": "オブジェクトから属性を取得"
+    },
+    "48": {
+        "question": "delattr()",
+        "discription": "オブジェクトから属性を削除"
+    },
+    "49": {
+        "question": "hasattr()",
+        "discription": "オブジェクトの属性名に存在していればTrueを返す"
+    },
+    "50": {
+        "question": "dir()",
+        "discription": "オブジェクトの有効な属性のリストを取得"
+    },
+    "51": {
+        "question": "globals()",
+        "discription": "グローバル変数などグローバルシンボルを取得"
+    },
+    "52": {
+        "question": "locals()",
+        "discription": "ローカル変数などローカルシンボルを取得"
+    },
+    "53": {
+        "question": "hash()",
+        "discription": "オブジェクトのハッシュ値を取得"
+    },
+    "54": {
+        "question": "id()",
+        "discription": "オブジェクトの識別値を取得"
+    },
+    "55": {
+        "question": "isinstance()",
+        "discription": "第一引数のオブジェクトが第二引数のインスタンスであるかチェックする"
+    },
+    "56": {
+        "question": "issubclass()",
+        "discription": "第一引数のクラスが第二引数のサブクラスかチェックする"
+    },
+    "57": {
+        "question": "object()",
+        "discription": "何もないオブジェクトを返す"
+    },
+    "58": {
+        "question": "property()",
+        "discription": "property属性を返す"
+    },
+    "59": {
+        "question": "repr()",
+        "discription": "オブジェクトを文字列として返す"
+    },
+    "60": {
+        "question": "super()",
+        "discription": "親クラスへのプロキシオブジェクトを返す"
+    },
+    "61": {
+        "question": "vars()",
+        "discription": "__dict__属性を持つ場合はそれを返す"
+    },
+    "62": {
+        "question": "compile()",
+        "discription": "そのままですがコンパイルを行う（exec,evalなどで実行可能）"
+    },
+    "63": {
+        "question": "eval()",
+        "discription": "文字列を評価、実行"
+    },
+    "64": {
+        "question": "exec()",
+        "discription": "コードの実行(コンパイル済みのオブジェクトやソースもそれぞれ実行可能）"
+    },
+    "65": {
+        "question": "help()",
+        "discription": "ヘルプを起動する（対話モジュール上で使う）"
+    },
+    "66": {
+        "question": "input()",
+        "discription": "標準入力より取得"
+    },
+    "67": {
+        "question": "print()",
+        "discription": "標準出力へ出力"
+    },
+    "68": {
+        "question": "open()",
+        "discription": "ファイルを開く"
+    },
+    "69": {
+        "question": "memoryview()",
+        "discription": "オブジェクトのメモリビューを取得して、メモリの状態などを見る"
+    },
+    "70": {
+        "question": "__import__()",
+        "discription": "import文と同等のことが可能"
+    }
 }

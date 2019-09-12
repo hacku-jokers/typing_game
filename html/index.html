@@ -169,7 +169,7 @@
 
 
     var firebaseRef = firebase.database().ref(`/html_Beginner_score`);
-    let max_score;
+    // let max_score;
     firebaseRef.on("value", function (snapshot) {
       const database_score = snapshot.val();
       for (const key in database_score) {
