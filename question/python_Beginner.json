@@ -1,102 +1,92 @@
 {
-  "1":{"answer":"",
-  "discription":""},
+  "1": {"question": "all()",
+      "discription": "すべての要素がTrueであればTrueを返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "2": {"question": "any()",
+    　　"discription": "いずれかの要素がTrueであればTrueを返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "3": {"question": "enumerate()",
+  　　  "discription": "リストやイテレータを受けとり、イテレータを返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "4": {"question": "zip()",
+        "discription": "複数のリスト、イテレータに対し同じインデックスをまとめて返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "5": {"question": "divmod()",
+        "discription": "割り算の結果と余りをまとめて求める"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "6": {"question": "eval()",
+        "discription": "文字列とオプションの引数 globals、locals をとる"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "7": {"question": "set()",
+        "discription": "集合を表現する型、setを作る"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "8": {"question": "print()",
+        "discription": "標準出力へ出力"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "9": {"question": "format()",
+        "discription": "引数で受け取った値で動的にテキストを生成する"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "10": {"question": "range()",
+        "discription": "rangeシーケンスを作る"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "11": {"question": "len()",
+        "discription": "リスト内の要素の数を取得"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "12": {"question": "type()",
+        "discription": "型を返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "13": {"question": "isinstance()",
+        "discription": "引数で受け取ったオブジェクトとデータ型を比較して真偽値を返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "14": {"question": "dir()",
+        "discription": "オブジェクトの有効な属性のリストを取得"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "15": {"question": "round()",
+        "discription": "四捨五入"},
 
-  "1":{"answer":"",
-  "discription":""},
-  
-  "1":{"answer":"",
-  "discription":""},
+  "16": {"question": "abs()",
+        "discription": "絶対値"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "17": {"question": "min()",
+        "discription": "最小値を取得"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "18": {"question": "max()",
+        "discription": "最大値を取得"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "19": {"question": "sum()",
+        "discription": "リストの合計値を返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "20": {"question": "divmod()",
+        "discription": "割り算の結果と余りをまとめて求める"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "21": {"question": "sorted()",
+        "discription": "リストをソートして返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+　"22": {"question": "open()",
+　　　　　"discription": "ファイルを開く"},
 
-  "1":{"answer":"",
-  "discription":""},
+　"23": {"question": "hash()",
+　　　　　"discription": "オブジェクトのハッシュ値を取得"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "24": {"question": "enumerate()",
+　　　　　"discription": "リスト要素などにインデックスをつけて返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "25": {"question": "str()",
+　　　　　"discription": "文字列型を返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "26": {"question": "int()",
+　　　　　"discription": "int型"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "27": {"question": "float()",
+　　　　　"discription": "浮動小数"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "28": {"question": "list()",
+　　　　　"discription": "リストを返す"},
 
-  "1":{"answer":"",
-  "discription":""},
+  "29": {"question": "tuple()",
+　　　　　"discription": "タプル型"},
 
-  "1":{"answer":"",
-  "discription":""},
-
-  "1":{"answer":"",
-  "discription":""},
-
-  "1":{"answer":"",
-  "discription":""},
-
+  "30": {"question": "dict()",
+　　　　　"discription": "辞書型"},
 
 }

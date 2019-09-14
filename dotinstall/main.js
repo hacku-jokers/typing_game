@@ -2,7 +2,7 @@
 
 {
   const words = [
-    'apple',
+    'a ',
     'sky',
     'blue',
     'middle',

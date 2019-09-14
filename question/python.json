@@ -1,15 +1,13 @@
 {
     "1": {
         "question": "all()",
-        "discription": "すべての要素がTrueであればTrueを返す"
-    },
+        "discription": "すべての要素がTrueであればTrueを返す"},
     "2": {
         "question": "any()",
-        "discription": "いずれかの要素がTrueであればTrueを返す"
-    },
+        "discription": "いずれかの要素がTrueであればTrueを返す"},
     "3": {
         "question": "enumerate()",
-        "discription": "リストやイテレータを受けとり、イテレータを返す"
+        "discription": "リスト要素などにインデックスをつけて返す"
     },
     "4": {
         "question": "zip()",
@@ -217,7 +215,7 @@
     },
     "55": {
         "question": "isinstance()",
-        "discription": "第一引数のオブジェクトが第二引数のインスタンスであるかチェックする"
+        "discription": "引数で受け取ったオブジェクトとデータ型を比較して真偽値を返す"
     },
     "56": {
         "question": "issubclass()",
@@ -278,5 +276,10 @@
     "70": {
         "question": "__import__()",
         "discription": "import文と同等のことが可能"
+    },
+
+    "71": {
+        "question": "format()",
+        "discription": "引数で受け取った値で動的にテキストを生成する"
     }
 }
